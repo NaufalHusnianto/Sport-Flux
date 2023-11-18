@@ -1,0 +1,7 @@
+{
+  "name": "SportFlux",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
