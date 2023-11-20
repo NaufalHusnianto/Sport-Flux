@@ -13,10 +13,10 @@ const Tab1: React.FC = () => {
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol>
+              <IonCol size='4' className='photo-card'>
                 <IonImg src='profile.png' id='photo-profile'></IonImg>
               </IonCol>
-              <IonCol>
+              <IonCol size='8' className='profile-card'>
                 <IonCard id='profile-data'>
                   <p>SportFlux User 1</p>
                   <p id='health-indicator'>80% healthy</p>

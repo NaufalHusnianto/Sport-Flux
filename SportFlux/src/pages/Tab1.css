@@ -21,12 +21,20 @@ ion-col {
     justify-content: center;
 }
 
+.photo-card {
+    width: 100%;
+}
+
 #photo-profile {
-    background: green;
+    width: 90%;
+    background-color: green;
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
 }
 
 #profile-data{
     background: darkblue;
+    width: 100%;
 }
 
 #health-indicator {
