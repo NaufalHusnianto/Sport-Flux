@@ -1,15 +1,10 @@
+ion-content {
+    --background: #6DBFEB;
+}
+
 ion-card {
-    --background: #000;
-    --color: white;
-  }
-  
-ion-card-title {
-    --color: #52ffe4;
-  }
-  
-ion-card-subtitle {
-    --color: #d1fff8;
-  }
+    --background: #3E7290;
+}
 
 ion-img {
     width: 30%;
@@ -19,6 +14,12 @@ ion-col {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#header {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    --background: #3E7290;
 }
 
 .photo-card {
@@ -33,14 +34,40 @@ ion-col {
 }
 
 #profile-data{
-    background: darkblue;
+    background: #122D3B;
+    color: white;
     width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#profile-data p {
+    margin: 8px;
 }
 
 #health-indicator {
-    background-color: green;
+    background-color: #008100;
+    padding: 3px;
+    width: 80%;
+    border-radius: 10px;
 }
 
 #emg-record {
-    background-color: blue;
+    background-color: #005B5A;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+#btn-dashboard {
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    --background: #122D3B;
+    --border-radius: 20px;
+}
+
+#live-record {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 20px;
 }
