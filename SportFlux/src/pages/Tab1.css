@@ -64,6 +64,7 @@ ion-col {
     margin-bottom: 1.5rem;
     --background: #122D3B;
     --border-radius: 20px;
+    --color: white;
 }
 
 #live-record {

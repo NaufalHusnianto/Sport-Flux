@@ -1,4 +1,4 @@
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonLabel, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -28,7 +28,7 @@ const Tab1: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonCol>
-                  <IonButton id='btn-dashboard'>Dashboard</IonButton>
+                  <IonButton id='btn-dashboard'></IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
@@ -37,6 +37,22 @@ const Tab1: React.FC = () => {
         {/* HEADER END */}
 
         {/* CONTENT */}
+        <IonCard id='live-record'>
+          <IonCardHeader>
+            <IonCardTitle>Sport Flux</IonCardTitle>
+            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+          </IonCardHeader>
+          <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+        </IonCard>
+
+        <IonCard id='live-record'>
+          <IonCardHeader>
+            <IonCardTitle>Sport Flux</IonCardTitle>
+            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+          </IonCardHeader>
+          <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+        </IonCard>
+
         <IonCard id='live-record'>
           <IonCardHeader>
             <IonCardTitle>Sport Flux</IonCardTitle>
