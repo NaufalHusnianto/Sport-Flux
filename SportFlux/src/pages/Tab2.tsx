@@ -39,7 +39,7 @@ const Tab2: React.FC = () => {
             OWNED DEVICE
           </IonCardTitle>
 
-          <IonCard>
+          <IonCard className='od-wrapper'>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -50,7 +50,7 @@ const Tab2: React.FC = () => {
                     <IonCardTitle id='title-od-card'>A1</IonCardTitle>
                     <p id='od-duration'>Duration : 00:05:12</p>
                       <p id='od-datastream'>Data Stream : 2 MB</p>
-                      <p id='od-battery'>Battery Level : 100%</p>
+                      <p id='od-battery'>Battery Level  : 100%</p>
                       <p id='od-status'>Status : active</p>
                   </IonCard>
                 </IonCol>
@@ -58,7 +58,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard>
+          <IonCard className='od-wrapper'>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -66,7 +66,7 @@ const Tab2: React.FC = () => {
                 </IonCol>
                 <IonCol size='7' class='owned-device-content'>
                   <IonCard className='card-owned-device'>
-                    <IonCardTitle id='title-od-card'>A1</IonCardTitle>
+                    <IonCardTitle id='title-od-card'>A2</IonCardTitle>
                     <p id='od-duration'>Duration : 00:05:12</p>
                       <p id='od-datastream'>Data Stream : 2 MB</p>
                       <p id='od-battery'>Battery Level : 100%</p>
@@ -77,7 +77,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard>
+          <IonCard className='od-wrapper'>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -85,7 +85,7 @@ const Tab2: React.FC = () => {
                 </IonCol>
                 <IonCol size='7' class='owned-device-content'>
                   <IonCard className='card-owned-device'>
-                    <IonCardTitle id='title-od-card'>A1</IonCardTitle>
+                    <IonCardTitle id='title-od-card'>A3</IonCardTitle>
                     <p id='od-duration'>Duration : 00:05:12</p>
                       <p id='od-datastream'>Data Stream : 2 MB</p>
                       <p id='od-battery'>Battery Level : 100%</p>
@@ -96,7 +96,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard>
+          <IonCard className='od-wrapper'>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -104,7 +104,7 @@ const Tab2: React.FC = () => {
                 </IonCol>
                 <IonCol size='7' class='owned-device-content'>
                   <IonCard className='card-owned-device'>
-                    <IonCardTitle id='title-od-card'>A1</IonCardTitle>
+                    <IonCardTitle id='title-od-card'>A4</IonCardTitle>
                     <p id='od-duration'>Duration : 00:05:12</p>
                       <p id='od-datastream'>Data Stream : 2 MB</p>
                       <p id='od-battery'>Battery Level : 100%</p>
@@ -115,7 +115,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard>
+          <IonCard className='od-wrapper'>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -123,7 +123,7 @@ const Tab2: React.FC = () => {
                 </IonCol>
                 <IonCol size='7' class='owned-device-content'>
                   <IonCard className='card-owned-device'>
-                    <IonCardTitle id='title-od-card'>A1</IonCardTitle>
+                    <IonCardTitle id='title-od-card'>A5</IonCardTitle>
                     <p id='od-duration'>Duration : 00:05:12</p>
                       <p id='od-datastream'>Data Stream : 2 MB</p>
                       <p id='od-battery'>Battery Level : 100%</p>

@@ -1,0 +1,118 @@
+ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    margin-top: 20px;
+}
+
+#header {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    --background: #3E7290;
+    
+}
+
+.grid-header{
+    border-bottom-left-radius: 50px;
+}
+
+.icon-header {
+    position: relative;
+    margin: 20px;
+    background-color: cadetblue;
+    width: 70px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+#img-icon{
+    position: relative;
+    width: 20vw;
+    z-index: 1;
+}
+
+.num-info{
+    font-size: 26pt;
+}
+.icon-header-info{
+    background-color: rgb(0, 85, 128);
+    height: 120px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+.dc-header{
+    background-color: black;
+    text-align: center;
+    align-content: center;
+    font-size: 16pt;
+}
+.dc-header {
+    margin-top: 20px;
+    height: 20px;
+}
+.num-info-header{
+    font-size: 24pt;
+    font-weight: 600;
+}
+
+#owned-device{
+    
+    border-radius: 30px;
+    --background: #3E7290;
+    text-align: center;
+}
+#title-owned-device{
+    margin: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    padding: 10px;
+    font-size: 14pt;
+    font-weight: 600;
+    color: #3E7290;
+    border-radius: 50px;
+}
+.img-owned-device{
+    padding: 0;
+    margin-left: 5%;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    height: 130px;
+    background: #122D3B;
+}
+#img-od{
+    width: 100%;
+}
+.owned-device-content{
+    text-align: start;
+    height: 130px;
+    background-color:rgb(79, 148, 173);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.od-wrapper{
+    box-shadow: none;
+}
+#title-od-card{
+    color: white;
+    font-size: 14pt;
+    font-weight: 700;
+}
+.card-owned-device{
+    margin-left: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.card-owned-device p{
+    line-height: 5px;
+    font-size: 10pt;
+    color: white;
+    
+}
