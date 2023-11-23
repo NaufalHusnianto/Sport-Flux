@@ -28,7 +28,7 @@ const Tab1: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonCol>
-                  <IonButton id='btn-dashboard'></IonButton>
+                  <IonButton id='btn-dashboard'>Dashboard</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
