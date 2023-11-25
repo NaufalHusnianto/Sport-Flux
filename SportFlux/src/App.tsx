@@ -14,6 +14,7 @@ import { ellipse, power, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Login from './pages/Login';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -53,6 +54,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/tab4">
             <Tab4 />
+          </Route>
+          <Route exact path="/login">
+            <Login />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
