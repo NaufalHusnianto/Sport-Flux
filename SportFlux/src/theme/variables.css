@@ -74,6 +74,14 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /* login page */
+  --ion-color-login-page: #fff;
+  --ion-color-login-page-rgb: 255,255,255;
+  --ion-color-login-page-contrast: #000000;
+  --ion-color-login-page-contrast-rgb: 0,0,0;
+  --ion-color-login-page-shade: #e0e0e0;
+  --ion-color-login-page-tint: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -191,6 +199,7 @@ http://ionicframework.com/docs/theming/ */
   }
 
 
+
   /*
    * Material Design Dark Theme
    * -------------------------------------------
@@ -243,4 +252,13 @@ html {
 
 ion-tab-bar {
   --background: #435973;
+}
+
+.ion-color-login-page {
+  --ion-color-base: var(--ion-color-login-page);
+  --ion-color-base-rgb: var(--ion-color-login-page-rgb);
+  --ion-color-contrast: var(--ion-color-login-page-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-login-page-contrast-rgb);
+  --ion-color-shade: var(--ion-color-login-page-shade);
+  --ion-color-tint: var(--ion-color-login-page-tint);
 }

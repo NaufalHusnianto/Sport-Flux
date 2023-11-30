@@ -10,7 +10,7 @@ const Login: React.FC = () => {
     };
     return (
         <IonPage>
-            <IonContent className="ion-padding-top" scrollY={false} style={{ backgroundColor: 'white' }}>
+            <IonContent className="ion-padding-top" scrollY={false} color={'login-page'}>
                 <IonText className='ion-text-center'>
                     <p>Hey there,</p>
                     <h1 className='title'>Welcome Back</h1>
