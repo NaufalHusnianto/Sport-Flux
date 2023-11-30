@@ -1,5 +1,6 @@
 import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonLabel, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab1.css';
+import SignalChart from '../components/SignalChart';
 
 const Tab1: React.FC = () => {
   return (
@@ -38,11 +39,7 @@ const Tab1: React.FC = () => {
 
         {/* CONTENT */}
         <IonCard id='live-record' color={'primary'}>
-          <IonCardHeader>
-            <IonCardTitle>Sport Flux</IonCardTitle>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-          </IonCardHeader>
-          <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+          <SignalChart/>
         </IonCard>
 
         <IonCard id='live-record' color={'primary'}>
