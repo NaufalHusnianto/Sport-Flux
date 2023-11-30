@@ -4,9 +4,9 @@ import './Tab1.css';
 const Tab1: React.FC = () => {
   return (
     <IonPage>
-      <IonContent>
+      <IonContent color={'tertiary'}>
         {/* HEADER */}
-        <IonHeader className='ion-no-border'>
+        <IonHeader className='ion-no-border' color={'primary'}>
           <IonToolbar id='header'>
             <IonGrid>
               <IonRow>
@@ -19,7 +19,7 @@ const Tab1: React.FC = () => {
                   <IonImg src='profile.png' id='photo-profile'></IonImg>
                 </IonCol>
                 <IonCol size='8' className='profile-card'>
-                  <IonCard id='profile-data'>
+                  <IonCard id='profile-data' color={'secondary'}>
                     <p>SportFlux User 1</p>
                     <p id='health-indicator'>80% healthy</p>
                     <p id='emg-record'>100 EMG Record</p>
@@ -28,7 +28,7 @@ const Tab1: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonCol>
-                  <IonButton id='btn-dashboard'>Dashboard</IonButton>
+                  <IonButton id='btn-dashboard' color={'secondary'}>Dashboard</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
@@ -37,7 +37,7 @@ const Tab1: React.FC = () => {
         {/* HEADER END */}
 
         {/* CONTENT */}
-        <IonCard id='live-record'>
+        <IonCard id='live-record' color={'primary'}>
           <IonCardHeader>
             <IonCardTitle>Sport Flux</IonCardTitle>
             <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
@@ -45,7 +45,7 @@ const Tab1: React.FC = () => {
           <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
         </IonCard>
 
-        <IonCard id='live-record'>
+        <IonCard id='live-record' color={'primary'}>
           <IonCardHeader>
             <IonCardTitle>Sport Flux</IonCardTitle>
             <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
@@ -53,7 +53,7 @@ const Tab1: React.FC = () => {
           <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
         </IonCard>
 
-        <IonCard id='live-record'>
+        <IonCard id='live-record' color={'primary'}>
           <IonCardHeader>
             <IonCardTitle>Sport Flux</IonCardTitle>
             <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
