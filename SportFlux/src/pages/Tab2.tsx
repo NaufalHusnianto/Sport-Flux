@@ -4,7 +4,7 @@ import './Tab2.css';
 const Tab2: React.FC = () => {
   return (
     <IonPage>
-      <IonContent>
+      <IonContent color={'tertiary'}>
         {/* header  */}
         <IonHeader className='ion-no-border'>
           <IonToolbar id='header'>
