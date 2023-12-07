@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, power, square, triangle } from 'ionicons/icons';
+import { analytics, batteryHalf, desktop, ellipse, home, homeOutline, person, power, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -35,6 +35,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Tab4 from './pages/Tab4';
+import ActivityTab from './pages/ActivityTab';
 
 setupIonicReact();
 
@@ -48,6 +49,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/tab2">
             <Tab2 />
+          </Route>
+          <Route exact path="/activity">
+            <ActivityTab />
           </Route>
           <Route exact path="/tab3">
             <Tab3 />
@@ -64,16 +68,19 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
+            <IonIcon aria-hidden="true" icon={home} />
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
+            <IonIcon aria-hidden="true" icon={desktop} />
+          </IonTabButton>
+          <IonTabButton tab="activity" href="/activity">
+            <IonIcon aria-hidden="true" icon={analytics} />
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={batteryHalf} />
           </IonTabButton>
           <IonTabButton tab="tab4" href="/tab4">
-            <IonIcon aria-hidden="true" icon={power} />
+            <IonIcon aria-hidden="true" icon={person} />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
