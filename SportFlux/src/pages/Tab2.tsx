@@ -39,7 +39,7 @@ const Tab2: React.FC = () => {
             OWNED DEVICE
           </IonCardTitle>
 
-          <IonCard className='od-wrapper'>
+          <IonCard className='od-wrapper' color={'primary'}>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -58,7 +58,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard className='od-wrapper'>
+          <IonCard className='od-wrapper' color={'primary'}>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -77,7 +77,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard className='od-wrapper'>
+          <IonCard className='od-wrapper' color={'primary'}>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -96,7 +96,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard className='od-wrapper'>
+          <IonCard className='od-wrapper' color={'primary'}>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
@@ -115,7 +115,7 @@ const Tab2: React.FC = () => {
             </IonGrid>
           </IonCard>
           
-          <IonCard className='od-wrapper'>
+          <IonCard className='od-wrapper' color={'primary'}>
             <IonGrid>
               <IonRow>
                 <IonCol size='4' class='img-owned-device '>
