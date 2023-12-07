@@ -38,14 +38,10 @@ const Tab1: React.FC = () => {
         {/* HEADER END */}
 
         {/* CONTENT */}
-        <IonCard id='live-record' color={'primary'}>
-          <SignalChart/>
-        </IonCard>
 
         <IonCard id='live-record' color={'primary'}>
           <IonCardHeader>
             <IonCardTitle>Sport Flux</IonCardTitle>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
         </IonCard>
@@ -53,7 +49,6 @@ const Tab1: React.FC = () => {
         <IonCard id='live-record' color={'primary'}>
           <IonCardHeader>
             <IonCardTitle>Sport Flux</IonCardTitle>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
         </IonCard>
