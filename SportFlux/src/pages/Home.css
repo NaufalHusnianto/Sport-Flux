@@ -42,7 +42,7 @@ ion-col {
     border-radius: 10px;
 }
 
-#emg-record {
+#emgRecord, #connectedEmg {
     background-color: #3E7290;
     padding: 3px;
     border-radius: 10px;

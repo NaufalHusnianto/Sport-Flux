@@ -1,7 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import './Tab4.css';
 
-const Tab4: React.FC = () => {
+const UserProfile: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
@@ -11,4 +10,4 @@ const Tab4: React.FC = () => {
   );
 };
 
-export default Tab4;
+export default UserProfile;

@@ -11,9 +11,11 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { analytics, batteryHalf, desktop, ellipse, home, homeOutline, person, power, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
+import Home from './pages/Home';
+import DeviceManager from './pages/DeviceManager';
+import ActivityTab from './pages/ActivityTab';
 import Tab3 from './pages/Tab3';
+import UserProfile from './pages/Profile';
 import Login from './pages/Login';
 
 /* Core CSS required for Ionic components to work properly */
@@ -34,8 +36,6 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Tab4 from './pages/Tab4';
-import ActivityTab from './pages/ActivityTab';
 
 setupIonicReact();
 
@@ -44,11 +44,11 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/home">
+            <Home />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/device-manager">
+            <DeviceManager />
           </Route>
           <Route exact path="/activity">
             <ActivityTab />
@@ -56,8 +56,8 @@ const App: React.FC = () => (
           <Route exact path="/tab3">
             <Tab3 />
           </Route>
-          <Route path="/tab4">
-            <Tab4 />
+          <Route exact path="/profile">
+            <UserProfile />
           </Route>
           <Route exact path="/login">
             <Login />
@@ -67,10 +67,10 @@ const App: React.FC = () => (
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="Home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="DeviceManager" href="/device-manager">
             <IonIcon aria-hidden="true" icon={desktop} />
           </IonTabButton>
           <IonTabButton tab="activity" href="/activity">
@@ -79,7 +79,7 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={batteryHalf} />
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/tab4">
+          <IonTabButton tab="UserProfile" href="/profile">
             <IonIcon aria-hidden="true" icon={person} />
           </IonTabButton>
         </IonTabBar>

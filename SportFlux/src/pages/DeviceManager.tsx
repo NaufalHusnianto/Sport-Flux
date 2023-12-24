@@ -1,7 +1,7 @@
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonTitle, IonToolbar  } from '@ionic/react';
-import './Tab2.css';
+import './DeviceManager.css';
 
-const Tab2: React.FC = () => {
+const DeviceManager: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
@@ -143,4 +143,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default DeviceManager;
