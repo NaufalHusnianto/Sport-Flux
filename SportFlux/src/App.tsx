@@ -35,6 +35,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 setupIonicReact();
 
@@ -62,7 +64,7 @@ const App: React.FC = () => (
             <Redirect to="/Home" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" className='custom-tab-bar'>
           <IonTabButton tab="Home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
           </IonTabButton>
@@ -70,7 +72,9 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={desktop} />
           </IonTabButton>
           <IonTabButton tab="activity" href="/activity">
-            <IonIcon aria-hidden="true" icon={analytics} />
+            <div className='text-white text-center fs-1 p-1 w-100 h-100' style={{background: '#122D3B', borderBottomRightRadius: '9999px', borderBottomLeftRadius: '9999px', border: 'solid 2px white'}}>
+              <IonIcon aria-hidden="true" icon={analytics} />
+            </div>
           </IonTabButton>
           <IonTabButton>
             <IonIcon aria-hidden="true" icon={batteryHalf} />
