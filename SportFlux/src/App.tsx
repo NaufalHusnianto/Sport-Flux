@@ -14,7 +14,6 @@ import { analytics, batteryHalf, desktop, ellipse, home, homeOutline, person, po
 import Home from './pages/Home';
 import DeviceManager from './pages/DeviceManager';
 import ActivityTab from './pages/ActivityTab';
-import Tab3 from './pages/Tab3';
 import UserProfile from './pages/Profile';
 import Login from './pages/Login';
 
@@ -53,9 +52,6 @@ const App: React.FC = () => (
           <Route exact path="/activity">
             <ActivityTab />
           </Route>
-          <Route exact path="/tab3">
-            <Tab3 />
-          </Route>
           <Route exact path="/profile">
             <UserProfile />
           </Route>
@@ -63,7 +59,7 @@ const App: React.FC = () => (
             <Login />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/Home" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -76,7 +72,7 @@ const App: React.FC = () => (
           <IonTabButton tab="activity" href="/activity">
             <IonIcon aria-hidden="true" icon={analytics} />
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton>
             <IonIcon aria-hidden="true" icon={batteryHalf} />
           </IonTabButton>
           <IonTabButton tab="UserProfile" href="/profile">

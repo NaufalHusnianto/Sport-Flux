@@ -1,5 +1,4 @@
 import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonLabel, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
-import './Home.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignalChart from '../components/SignalChart';
 
@@ -8,29 +7,29 @@ const Home: React.FC = () => {
     <IonPage>
       <IonContent color={'tertiary'}>
         {/* HEADER */}
-        <IonHeader className='ion-no-border' color={'primary'}>
-          <IonToolbar id='header'>
+        <IonHeader className='ion-no-border'>
+          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px'}} color={'primary'}>
             <IonGrid>
               <IonRow>
-                <IonCol>
-                  <IonImg src='LOGO.png' id='logo'></IonImg>
+                <IonCol className='d-flex justify-content-center align-item-center'>
+                  <IonImg src='LOGO.png' style={{ width: '30%', height: 'auto' }} />
                 </IonCol>
               </IonRow>
               <IonRow>
-                <IonCol size='4' className='photo-card'>
-                  <IonImg src='profile.png' id='photo-profile'></IonImg>
+                <IonCol size='4' className='w-100 h-100'>
+                  <IonImg src='/profile.png' style={{ background: 'green', boxShadow: '2px 2px black', borderRadius: '20px' }}/>
                 </IonCol>
-                <IonCol size='8' className='profile-card'>
-                  <IonCard id='profile-data' color={'secondary'}>
-                    <p>SportFlux User 1</p>
-                    <p id='health-indicator'>80% healthy</p>
-                    <p id='emg-record'>100 EMG Record</p>
+                <IonCol size='8'>
+                  <IonCard className='w-100 p-2 pb-3' color={'secondary'} style={{borderRadius: '20px'}}>
+                    <p className='mt-0 mb-1'>SportFlux User 1</p>
+                    <p style={{ background: '#008100', padding: '3px', borderRadius: '10px', width: '80%', marginBottom: '5px'}}>80% healthy</p>
+                    <p style={{ background: '#3E7290', padding: '3px', borderRadius: '10px', width: '100%', margin: '0'}}>100 EMG Record</p>
                   </IonCard>
                 </IonCol>
               </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonButton id='btn-dashboard' color={'secondary'}>Dashboard</IonButton>
+              <IonRow className='mt-0'>
+                <IonCol className='text-center'>
+                  <IonButton className='mt-0 mb-3' style={{borderRadius: '20px', width: '80%'}} color={'secondary'}>Dashboard</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
@@ -39,14 +38,16 @@ const Home: React.FC = () => {
         {/* HEADER END */}
 
         {/* CONTENT */}
-        <IonCard color={'primary'} style={{borderRadius: '25px'}} className='mt-4 mb-4'>
-          <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
-          <IonCardHeader>
+        <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px'}} >
+          <IonCardContent>
+            <SignalChart/>
+          </IonCardContent>
+          <IonCardContent style={{background: '#122D3B'}} >
             <IonCardTitle className='text-center fw-bold fs-6'>Live Record Channel 1 Device 1</IonCardTitle>
-          </IonCardHeader>
+          </IonCardContent>
         </IonCard>
 
-        <IonCard color={'primary'} style={{borderRadius: '25px'}}>
+        <IonCard color={'primary'} className='mt-3 mb-3' style={{borderRadius: '25px'}}>
           <IonCardHeader>
             <IonCardTitle className='fs-6 fw-bold text-center'>Connected Sportflux EMG</IonCardTitle>
           </IonCardHeader>
@@ -84,7 +85,7 @@ const Home: React.FC = () => {
           </IonCardContent>
         </IonCard>
 
-        <IonCard color={'primary'} style={{borderRadius: '25px'}}>
+        <IonCard color={'primary'} className='mb-3 mt-3' style={{borderRadius: '25px'}}>
           <IonCardContent>
             <IonGrid>
               <IonRow className="justify-content-center">
