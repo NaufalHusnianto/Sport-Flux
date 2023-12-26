@@ -16,6 +16,7 @@ import DeviceManager from './pages/DeviceManager';
 import ActivityTab from './pages/ActivityTab';
 import UserProfile from './pages/Profile';
 import Login from './pages/Login';
+import Physiotherapist from './pages/Physiotherapist';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,6 +37,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Trainer from './pages/Trainer';
 
 
 setupIonicReact();
@@ -57,8 +59,11 @@ const App: React.FC = () => (
           <Route exact path="/profile">
             <UserProfile />
           </Route>
-          <Route exact path="/login">
-            <Login />
+          <Route exact path="/physiotherapist">
+            <Physiotherapist />
+          </Route>
+          <Route exact path="/trainer">
+            <Trainer />
           </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
@@ -84,6 +89,9 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      <Route exact path="/login">
+            <Login />
+      </Route>
     </IonReactRouter>
   </IonApp>
 );

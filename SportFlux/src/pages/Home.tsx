@@ -1,4 +1,4 @@
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonToolbar } from '@ionic/react';
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRouterLink, IonRow, IonToolbar } from '@ionic/react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignalChart from '../components/SignalChart';
 
@@ -93,10 +93,14 @@ const Home: React.FC = () => {
                   <IonImg src='/Comunity.png' style={{width: '80%', height: 'auto'}} />
                 </IonCol>
                 <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px'}}>
-                  <IonImg src='/Physiotherapist.png' style={{width: '80%', height: 'auto'}} />
+                  <IonRouterLink href='/physiotherapist'>
+                    <IonImg src='/Physiotherapist.png' style={{width: '80%', height: 'auto'}} />
+                  </IonRouterLink>
                 </IonCol>
                 <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px'}}>
-                  <IonImg src='/Trainer.png' style={{width: '80%', height: 'auto'}} />
+                  <IonRouterLink href='/trainer'>
+                    <IonImg src='/Trainer.png' style={{width: '80%', height: 'auto'}} />
+                  </IonRouterLink>
                 </IonCol>
               </IonRow>
             </IonGrid>
