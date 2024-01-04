@@ -71,21 +71,21 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom" className='custom-tab-bar'>
           <IonTabButton tab="Home" href="/home">
-            <IonIcon aria-hidden="true" icon={home} />
+            <IonIcon aria-hidden="true" icon={home} color='light'/>
           </IonTabButton>
           <IonTabButton tab="DeviceManager" href="/device-manager">
-            <IonIcon aria-hidden="true" icon={desktop} />
+            <IonIcon aria-hidden="true" icon={desktop} color='light'/>
           </IonTabButton>
           <IonTabButton tab="activity" href="/activity">
             <div className='text-white text-center fs-1 p-1 w-100 h-100' style={{background: '#122D3B', borderBottomRightRadius: '9999px', borderBottomLeftRadius: '9999px', border: 'solid 2px white'}}>
-              <IonIcon aria-hidden="true" icon={analytics} />
+              <IonIcon aria-hidden="true" icon={analytics} color='light'/>
             </div>
           </IonTabButton>
           <IonTabButton>
-            <IonIcon aria-hidden="true" icon={batteryHalf} />
+            <IonIcon aria-hidden="true" icon={batteryHalf} color='light'/>
           </IonTabButton>
           <IonTabButton tab="UserProfile" href="/profile">
-            <IonIcon aria-hidden="true" icon={person} />
+            <IonIcon aria-hidden="true" icon={person} color='light'/>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
