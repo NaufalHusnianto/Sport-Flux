@@ -12,7 +12,7 @@ const Physiotherapist: React.FC = () => {
                     <IonGrid>
                         <IonRow>
                             <IonCol size="10">
-                                <IonSearchbar placeholder="Search" color={"dark"}/>
+                                <IonSearchbar placeholder="Search" color={"dark"} />
                             </IonCol>
                             <IonCol size="2">
                                 <div></div>

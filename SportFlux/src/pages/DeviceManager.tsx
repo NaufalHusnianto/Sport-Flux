@@ -8,7 +8,7 @@ const DeviceManager: React.FC = () => {
       <IonContent color={'tertiary'}>
         {/* header  */}
         <IonHeader className='ion-no-border'>
-          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px'}} color={'primary'}>
+          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
             <IonGrid className='mb-2'>
               <IonRow>
                 <IonCol className='d-flex justify-content-center align-item-center'>
@@ -37,12 +37,12 @@ const DeviceManager: React.FC = () => {
         </IonHeader>
 
       {/* content */}
-        <IonCard color={'primary'} style={{ borderRadius: '30px' }}>
+        <IonCard color={'primary'} style={{ borderRadius: '30px', background: 'rgba(0, 0, 0, 0.3)' }}>
           <IonCardTitle className='text-center mt-3'>
             <p style={{ margin: 'auto', width: '50%' }} className='bg-white rounded-pill text-black fs-7 p-2'>Owned Device</p>
           </IonCardTitle>
 
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
@@ -60,7 +60,7 @@ const DeviceManager: React.FC = () => {
               </IonRow>
             </IonGrid>
           </IonCard>
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
@@ -78,7 +78,7 @@ const DeviceManager: React.FC = () => {
               </IonRow>
             </IonGrid>
           </IonCard>
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
@@ -96,7 +96,7 @@ const DeviceManager: React.FC = () => {
               </IonRow>
             </IonGrid>
           </IonCard>
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
@@ -114,7 +114,7 @@ const DeviceManager: React.FC = () => {
               </IonRow>
             </IonGrid>
           </IonCard>
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>

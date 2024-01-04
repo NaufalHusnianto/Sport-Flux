@@ -40,7 +40,7 @@ const Home: React.FC = () => {
         {/* CONTENT */}
         <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
           <IonCardContent>
-            <SignalChart/>
+            {/* <SignalChart/> */}
           </IonCardContent>
           <IonCardContent style={{background: '#122D3B'}} >
             <IonCardTitle className='text-center fw-bold fs-6'>Live Record Channel 1 Device 1</IonCardTitle>
