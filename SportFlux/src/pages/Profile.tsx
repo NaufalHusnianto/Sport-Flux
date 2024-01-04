@@ -1,7 +1,19 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar } from '@ionic/react';
 import { settings } from 'ionicons/icons';
+import { logoutUser } from '../firebaseConfig';
+import { useHistory } from "react-router-dom";
 
 const UserProfile: React.FC = () => {
+  const history = useHistory();
+    const handleLogout = async () => {
+    const success = await logoutUser();
+    if (success) {
+      history.push('/login')
+      console.log('Logout successful');
+    } else {
+      console.log('Logout failed');
+    }
+  }
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
@@ -28,6 +40,9 @@ const UserProfile: React.FC = () => {
               <IonRow className='mt-0'>
                 <IonCol className='text-center'>
                   <IonButton className='mt-0 mb-3' style={{borderRadius: '20px', width: '80%'}} color={'secondary'}>Change Profile</IonButton>
+                </IonCol>
+                <IonCol>
+                  <IonButton onClick={handleLogout} >LOGOUT</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>

@@ -1,9 +1,28 @@
 import { IonButton, IonCardContent, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonLabel, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import { lockClosed, lockClosedOutline, logInOutline, logInSharp, mailOutline, personAddOutline } from 'ionicons/icons';
-import React from 'react';
+import React, {useState} from 'react';
 import './Login.css';
+import {loginUser} from "../firebaseConfig";
+import { useHistory } from "react-router-dom";
 
 const Login: React.FC = () => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [showToast, setShowToast] = useState(false); 
+    const history = useHistory();
+
+  async function login() {
+    loginUser(email, password, (success) => {
+        if (success) {
+          // Redirect to home page upon successful login
+          history.push('/home');
+        } else {
+          // Handle login failure, e.g., show error message
+          console.log('Login Failed');
+        }
+      });
+  }
     const doLogin = (event:any) =>{
         event.preventDefault();
         console.log('doLogin')
@@ -17,14 +36,13 @@ const Login: React.FC = () => {
                 </IonText>
 
                 <IonCardContent>
-
                                 <form className='login-form'>
-                                    <IonInput type='email' name='email' className='input-fields' placeholder='Email'>
+                                    <IonInput type='email' name='email' className='input-fields' placeholder='Email' onIonChange={(e: any) => setEmail(e.target.value)}>
                                         <div slot='label'>
                                             <IonIcon icon={mailOutline} className='icons'></IonIcon>
                                         </div>
                                     </IonInput>
-                                    <IonInput type='password' name='password' className='input-fields' placeholder='Password'>
+                                    <IonInput type='password' name='password' className='input-fields' placeholder='Password' onIonChange={(e: any) => setPassword(e.target.value)}>
                                         <div slot='label'>
                                             <IonIcon icon={lockClosedOutline} className='icons'></IonIcon>
                                         </div>
@@ -34,10 +52,9 @@ const Login: React.FC = () => {
                                     <p>Forgot your Password?</p>
                                 </div>
 
-                <IonButton className='button' shape='round' type='submit' expand='block'>
-                        Login
-                        <IonIcon icon={logInSharp} slot='start'/>
-                </IonButton>
+                            <IonButton className='button' shape='round' expand='block' onClick={login}>Login
+                                <IonIcon icon={logInSharp} slot='start' />
+                            </IonButton>
 
                 <div className="line-with-text">
                     <IonRow>
