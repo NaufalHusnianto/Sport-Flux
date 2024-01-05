@@ -4,6 +4,7 @@ import { getAuth, signOut, signInWithEmailAndPassword } from "firebase/auth";
 import { Auth } from "firebase/auth";
 import { History } from "history";
 
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -19,16 +20,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth(app); // Get the Auth instance
+// const auth = getAuth(app); // Get the Auth instance
 
 export async function loginUser(email: string, password: string, callback: (success: boolean) => void) {
   try {
     const res = await signInWithEmailAndPassword(auth as Auth, email, password);
     console.log("User logged in:", res.user);
-    callback(true); // Call the callback with success status
+    callback(true); 
   } catch (error) {
     console.error("Error logging in:", error);
-    callback(false); // Call the callback with failure status
+    callback(false);
   }
 }
 
@@ -43,3 +44,5 @@ export const logoutUser = async () => {
     return false;
   }
 };
+
+export const auth = getAuth(app); 
