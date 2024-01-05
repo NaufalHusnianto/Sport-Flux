@@ -15,7 +15,9 @@ function PersonItemContent({ name, category, location, tag, rating }) {
                                 <p className="fs-8">{name}</p>
                                 <p className="fs-8">rating: {rating}/5</p>
                                 <p className="fs-8">{location}</p>
-                                <p className="fs-8">{tag}</p>
+                                <p className="fs-8">{tag.map(tag=>(
+                                    <span key={tag}>{tag} </span>
+                                ))}</p>
                             </IonCol>
                         </IonRow>
                     </IonGrid>

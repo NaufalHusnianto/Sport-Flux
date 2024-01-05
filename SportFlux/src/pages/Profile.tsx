@@ -18,7 +18,7 @@ const UserProfile: React.FC = () => {
     <IonPage>
       <IonContent color={'tertiary'}>
       <IonHeader className='ion-no-border mb-4'>
-          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px'}} color={'primary'}>
+          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
             <IonGrid>
               <IonRow>
                 <IonCol className='d-flex justify-content-center align-item-center'>
@@ -39,22 +39,22 @@ const UserProfile: React.FC = () => {
               </IonRow>
               <IonRow className='mt-0'>
                 <IonCol className='text-center'>
-                  <IonButton className='mt-0 mb-3' style={{borderRadius: '20px', width: '80%'}} color={'secondary'}>Change Profile</IonButton>
+                  <IonButton className='mt-0 mb-4 w-100' style={{borderRadius: '20px'}} color={'secondary'}>Change Profile</IonButton>
                 </IonCol>
                 <IonCol>
-                  <IonButton onClick={handleLogout} >LOGOUT</IonButton>
+                  <IonButton onClick={handleLogout} className='mt-0 mb-4 w-100' style={{borderRadius: '20px'}} color={'secondary'}>Logout</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
           </IonToolbar>
         </IonHeader>
 
-        <IonCard color={'primary'} style={{ borderRadius: '30px' }}>
+        <IonCard color={'primary'} style={{ borderRadius: '30px', background: 'rgba(0, 0, 0, 0.3)' }}>
           <IonCardTitle className='text-center mt-3'>
             <p style={{ margin: 'auto', width: '90%', background: '#122D3B' }} className='rounded-pill text-white fs-7 p-1'>My Activity</p>
           </IonCardTitle>
 
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: '#122D3B' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
@@ -70,7 +70,7 @@ const UserProfile: React.FC = () => {
             </IonGrid>
           </IonCard>
 
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: '#122D3B' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
@@ -86,7 +86,7 @@ const UserProfile: React.FC = () => {
             </IonGrid>
           </IonCard>
 
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: '#122D3B' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
@@ -102,7 +102,7 @@ const UserProfile: React.FC = () => {
             </IonGrid>
           </IonCard>
 
-          <IonCard color={'primary'}>
+          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: '#122D3B' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
