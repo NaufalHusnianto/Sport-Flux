@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signOut, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { Auth } from "firebase/auth";
 import { History } from "history";
 
@@ -44,5 +44,16 @@ export const logoutUser = async () => {
     return false;
   }
 };
+
+export const sendUserPasswordResetEmail = async (email: string) => {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    console.log('Password reset email sent successfully');
+  } catch (error) {
+    console.error('Error sending password reset email:', error);
+    
+  }
+};
+
 
 export const auth = getAuth(app); 

@@ -27,7 +27,7 @@ import './Login.css';
 
 
 // This is login via Google
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, sendEmailVerification , sendPasswordResetEmail} from "firebase/auth";
 import { auth } from "../firebaseConfig";
 
 
@@ -50,25 +50,23 @@ const Login: React.FC = () => {
     }
   
     async function handleGoogleLogin() {
-      setLoading(true); 
-      const provider = new GoogleAuthProvider();
-  
-      try {
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-        console.log('Logged in user:', user);
-        history.push('/home');
-      } catch (error) {
-        console.error('Google login error:', error);
-        setShowErrorToast(true);
-      } finally {
-        setLoading(false); 
+        setLoading(true);
+        const provider = new GoogleAuthProvider();
+      
+        try {
+          const result = await signInWithPopup(auth, provider);
+          const user = result.user;
+      
+      
+          console.log('Logged in user:', user);
+          history.push('/home');
+        } catch (error) {
+          console.error('Google login error:', error);
+          setShowErrorToast(true);
+        } finally {
+          setLoading(false);
+        }
       }
-    }
-
-
-   
-
   return (
     <IonPage>
       <IonContent className="ion-padding-top" scrollY={false} color={'login-page'}>
@@ -102,9 +100,9 @@ const Login: React.FC = () => {
               </div>
             </IonInput>
           </form>
-          <div className="forgot">
-            <p>Forgot your Password?</p>
-          </div>
+            <div className="forgot" style={{ cursor: 'pointer' }}>
+                <a href="/forget">Forget Your Password</a>
+            </div>
 
           <IonButton className="button" shape="round" expand="block" onClick={login}>
             Login

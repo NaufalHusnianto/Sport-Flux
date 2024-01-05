@@ -17,7 +17,7 @@ import ActivityTab from './pages/ActivityTab';
 import UserProfile from './pages/Profile';
 import Login from './pages/Login';
 import Physiotherapist from './pages/Physiotherapist';
-
+import ForgetPassword from './pages/ForgetPassword';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -64,6 +64,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/trainer">
             <Trainer />
+          </Route>
+          <Route exact path="/forgetpassword">
+            <ForgetPassword />
           </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
