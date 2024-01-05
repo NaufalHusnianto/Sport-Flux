@@ -11,6 +11,10 @@ function PersonList({persons, type}){
         }
         return null;
     })
+    if (renderedPersons.filter(Boolean).length === 0) {
+        return <p className="text-center">Tidak ditemukan</p>;
+      }
+
     return <>{renderedPersons}</>
 }
 

@@ -2,17 +2,49 @@ import { IonContent, IonCardContent, IonCardTitle, IonPage, IonHeader, IonGrid, 
 import "bootstrap/dist/css/bootstrap.min.css";
 import getInitialData from "../utils";
 import PersonList from "../components/PersonList";
+import Searchbar from "../components/Searchbar";
+import React from "react";
 
-const Trainer: React.FC = () => {
-    return(
-        <IonPage>
+interface Person{
+    id: number;
+    name: string;
+    category: string[];
+    rating: number;
+    location: string;
+    tag: string[];
+}
+
+interface PersonState{
+    persons: Person[];
+    keyWord: string;
+}
+
+class Trainer extends React.Component<{}, PersonState>{
+    constructor(props: {}){
+        super(props);
+
+        this.state = {
+            persons: getInitialData(),
+            keyWord: ''
+        };
+
+        this.onSearchHandler = this.onSearchHandler.bind(this);
+    }
+
+    onSearchHandler({name}: {name: string}){
+        this.setState({keyWord: name});
+    }
+
+    render(){
+        return(
+<IonPage>
             <IonContent color={"tertiary"}>
                 <IonHeader className='ion-no-border'>
                 <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px'}} color={'primary'}>
                     <IonGrid>
                         <IonRow>
                             <IonCol size="10">
-                                <IonSearchbar placeholder="Search" color={"dark"}/>
+                            <Searchbar search={(searchTerm: string) => this.onSearchHandler({name: searchTerm})}/>
                             </IonCol>
                             <IonCol size="2">
                                 <div></div>
@@ -57,12 +89,17 @@ const Trainer: React.FC = () => {
                         <IonCardTitle className='fw-bold fs-5 bg-white text-black text-center rounded-pill'>Trainer List</IonCardTitle>
                     </IonCardHeader>
                     <IonCardContent >
-                        <PersonList persons={getInitialData()} type={'trainer'}/>
+                            <PersonList persons={this.state.persons.filter(
+                                person => person.name.toLowerCase().includes(this.state.keyWord.toLowerCase())
+                            )} 
+                            type={'trainer'}
+                            />
                     </IonCardContent>
                 </IonCard>
             </IonContent>
         </IonPage>
-    );
-};
+        )
+    }
+}
 
 export default Trainer;

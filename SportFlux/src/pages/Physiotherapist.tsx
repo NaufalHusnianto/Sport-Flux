@@ -14,12 +14,12 @@ interface Person{
     tag: string[];
 }
 
-interface PhysiotherapistState{
+interface PersonState{
     persons: Person[];
     keyWord: string;
 }
 
-class Physiotherapist extends React.Component<{}, PhysiotherapistState>{
+class Physiotherapist extends React.Component<{}, PersonState>{
     constructor(props: {}){
         super(props);
 
