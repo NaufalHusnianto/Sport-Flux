@@ -47,6 +47,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                                     <Searchbar search={(searchTerm: string) => this.onSearchHandler({name: searchTerm})}/>
                                 </IonCol>
                                 <IonCol size="2">
+                                    <IonImg src='/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}/>
                                     <div></div>
                                 </IonCol>
                             </IonRow>
