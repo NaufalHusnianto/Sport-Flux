@@ -39,6 +39,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Trainer from './pages/Trainer';
+import Diagnose from './pages/Diagnose';
 
 
 setupIonicReact();
@@ -68,6 +69,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/trainer">
             <Trainer />
+          </Route>
+          <Route exact path="/Diagnose">
+            <Diagnose />
           </Route>
           <Route exact path="/">
             <Redirect to="/Home" />

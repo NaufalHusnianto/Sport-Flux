@@ -8,7 +8,7 @@ const DeviceManager: React.FC = () => {
       <IonContent color={'tertiary'}>
         {/* header  */}
         <IonHeader className='ion-no-border'>
-          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
+          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
             <IonGrid className='mb-2'>
               <IonRow>
                 <IonCol className='d-flex justify-content-center align-item-center'>
@@ -37,7 +37,7 @@ const DeviceManager: React.FC = () => {
         </IonHeader>
 
       {/* content */}
-        <IonCard color={'primary'} style={{ borderRadius: '30px', background: 'rgba(0, 0, 0, 0.3)' }}>
+        <IonCard className='mt-4' color={'primary'} style={{ borderRadius: '30px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
           <IonCardTitle className='text-center mt-3'>
             <p style={{ margin: 'auto', width: '50%' }} className='bg-white rounded-pill text-black fs-7 p-2'>Owned Device</p>
           </IonCardTitle>
