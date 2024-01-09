@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { analytics, batteryHalf, desktop, ellipse, home, homeOutline, person, power, square, triangle } from 'ionicons/icons';
+import { analytics, batteryHalf, desktop, ellipse, home, homeOutline, paperPlane, people, peopleOutline, person, power, square, triangle } from 'ionicons/icons';
 import Home from './pages/Home';
 import DeviceManager from './pages/DeviceManager';
 import ActivityTab from './pages/ActivityTab';
@@ -18,6 +18,7 @@ import UserProfile from './pages/Profile';
 import Login from './pages/Login';
 import Physiotherapist from './pages/Physiotherapist';
 import ForgetPassword from './pages/ForgetPassword';
+import Community from './pages/Community';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -56,6 +57,9 @@ const App: React.FC = () => (
           <Route exact path="/activity">
             <ActivityTab />
           </Route>
+          <Route exact path="/community">
+            <Community/>
+          </Route>
           <Route exact path="/profile">
             <UserProfile />
           </Route>
@@ -67,6 +71,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/forgetpassword">
             <ForgetPassword />
+          </Route>
+          <Route exact path="/login">
+            <Login />
           </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
@@ -84,17 +91,14 @@ const App: React.FC = () => (
               <IonIcon aria-hidden="true" icon={analytics} color='light'/>
             </div>
           </IonTabButton>
-          <IonTabButton>
-            <IonIcon aria-hidden="true" icon={batteryHalf} color='light'/>
+          <IonTabButton tab="community" href="/community">
+            <IonIcon aria-hidden="true" icon={people} color='light'/>
           </IonTabButton>
           <IonTabButton tab="UserProfile" href="/profile">
             <IonIcon aria-hidden="true" icon={person} color='light'/>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-      <Route exact path="/login">
-            <Login />
-      </Route>
     </IonReactRouter>
   </IonApp>
 );

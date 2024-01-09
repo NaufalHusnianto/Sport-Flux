@@ -90,16 +90,17 @@ const Home: React.FC = () => {
             <IonGrid>
               <IonRow className="justify-content-center">
                 <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px'}}>
-                  <IonImg src='/Comunity.png' style={{width: '80%', height: 'auto'}} />
-                </IonCol>
-                <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px'}}>
                   <IonRouterLink href='/physiotherapist'>
-                    <IonImg src='/Physiotherapist.png' style={{width: '80%', height: 'auto'}} />
+                    <div className="d-flex align-items-center justify-content-center" style={{ width: '100%', height: '100%' }}>
+                      <IonImg src='/Physiotherapist.png' style={{width: '50%', height: 'auto'}} />
+                    </div>
                   </IonRouterLink>
                 </IonCol>
                 <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px'}}>
                   <IonRouterLink href='/trainer'>
-                    <IonImg src='/Trainer.png' style={{width: '80%', height: 'auto'}} />
+                    <div className="d-flex align-items-center justify-content-center" style={{ width: '100%', height: '100%' }}>
+                      <IonImg src='/Trainer.png' style={{width: '50%', height: 'auto'}} />
+                    </div>
                   </IonRouterLink>
                 </IonCol>
               </IonRow>
