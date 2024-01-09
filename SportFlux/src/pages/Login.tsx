@@ -101,7 +101,7 @@ const Login: React.FC = () => {
             </IonInput>
           </form>
             <div className="forgot" style={{ cursor: 'pointer' }}>
-                <a href="/forget">Forget Your Password</a>
+                <a href="/forgetpassword">Forget Your Password</a>
             </div>
 
           <IonButton className="button" shape="round" expand="block" onClick={login}>

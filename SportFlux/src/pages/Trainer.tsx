@@ -37,10 +37,10 @@ class Trainer extends React.Component<{}, PersonState>{
 
     render(){
         return(
-<IonPage>
+        <IonPage>
             <IonContent color={"tertiary"}>
                 <IonHeader className='ion-no-border'>
-                <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px'}} color={'primary'}>
+                <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
                     <IonGrid>
                         <IonRow>
                             <IonCol size="10">
@@ -62,7 +62,7 @@ class Trainer extends React.Component<{}, PersonState>{
                 </IonToolbar>
                 </IonHeader>
 
-                <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px'}} >
+                <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
                     <IonCardHeader>
                         <IonCardTitle className='fw-bold fs-5'>Recomendation</IonCardTitle>
                     </IonCardHeader>
@@ -85,7 +85,7 @@ class Trainer extends React.Component<{}, PersonState>{
                     </IonCardContent>
                 </IonCard>
 
-                <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px'}} >
+                <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
                     <IonCardHeader>
                         <IonCardTitle className='fw-bold fs-5 bg-white text-black text-center rounded-pill'>Trainer List</IonCardTitle>
                     </IonCardHeader>

@@ -69,12 +69,6 @@ const App: React.FC = () => (
           <Route exact path="/trainer">
             <Trainer />
           </Route>
-          <Route exact path="/forgetpassword">
-            <ForgetPassword />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
           </Route>
@@ -99,6 +93,12 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      <Route exact path="/login">
+        <Login />
+      </Route>
+      <Route exact path="/forgetpassword">
+        <ForgetPassword />
+      </Route>
     </IonReactRouter>
   </IonApp>
 );

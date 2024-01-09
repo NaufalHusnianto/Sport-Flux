@@ -28,7 +28,7 @@ const Community: React.FC = () => {
               </IonRow>
               <IonRow className='mt-0'>
                 <IonCol className='text-center'>
-                  <IonButton className='mt-0 mb-3' style={{borderRadius: '20px', width: '80%'}} color={'secondary'}>Dashboard</IonButton>
+                  <IonButton className='mt-0 mb-3' style={{borderRadius: '20px', width: '80%'}} color={'secondary'}>Community</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>

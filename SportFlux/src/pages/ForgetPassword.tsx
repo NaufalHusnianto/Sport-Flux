@@ -16,7 +16,7 @@ import {
 import { sendUserPasswordResetEmail } from '../firebaseConfig';
 import './Login.css';
 
-const Login: React.FC = () => {
+const ForgetPassword: React.FC = () => {
   const [email, setEmail] = useState('');
   const [showErrorToast, setShowErrorToast] = useState(false);
   const history = useHistory();
@@ -77,4 +77,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default ForgetPassword;

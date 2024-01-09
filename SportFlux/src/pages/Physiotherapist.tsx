@@ -40,7 +40,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
             <IonPage>
                 <IonContent color={"tertiary"}>
                     <IonHeader className='ion-no-border'>
-                    <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px'}} color={'primary'}>
+                    <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
                         <IonGrid>
                             <IonRow>
                                 <IonCol size="10">
@@ -63,7 +63,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                     </IonHeader>
     
                     
-                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px'}} >
+                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
                         <IonCardHeader>
                             <IonCardTitle className='fw-bold fs-5'>Recomendation</IonCardTitle>
                         </IonCardHeader>
@@ -85,7 +85,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                             </IonCard>
                         </IonCardContent>
                     </IonCard>
-                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px'}} >
+                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
                         <IonCardHeader>
                             <IonCardTitle className='fw-bold fs-5 bg-white text-black text-center rounded-pill'>Physiotherapist  List</IonCardTitle>
                         </IonCardHeader>
