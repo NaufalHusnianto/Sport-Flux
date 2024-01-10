@@ -5,7 +5,8 @@ import { settings } from 'ionicons/icons';
 const DeviceManager: React.FC = () => {
   return (
     <IonPage>
-      <IonContent color={'tertiary'}>
+      <IonContent color={'tertiary'} style={{backgroundImage: 'url(${process.env.PUBLIC_URL}/bg-device-manager.png)', backgroundSize: 'cover' }} >
+
         {/* header  */}
         <IonHeader className='ion-no-border'>
           <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
@@ -48,7 +49,7 @@ const DeviceManager: React.FC = () => {
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
                   <IonImg src='IM1.png'/>
                 </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
+                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' ,background: 'rgba(0,0,0,0.5)'}}>
                   <p className='fs-3 mb-1 mt-0'>A1</p>
                   <p className='m-0'>Duration : 00.05.41</p>
                   <p className='m-0'>Data Stream : 2mb</p>
@@ -66,7 +67,7 @@ const DeviceManager: React.FC = () => {
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
                   <IonImg src='IM1.png'/>
                 </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
+                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B',background: 'rgba(0,0,0,0.5)' }}>
                   <p className='fs-3 mb-1 mt-0'>A1</p>
                   <p className='m-0'>Duration : 00.05.41</p>
                   <p className='m-0'>Data Stream : 2mb</p>
@@ -84,7 +85,7 @@ const DeviceManager: React.FC = () => {
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
                   <IonImg src='IM1.png'/>
                 </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
+                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' ,background: 'rgba(0,0,0,0.5)'}}>
                   <p className='fs-3 mb-1 mt-0'>A1</p>
                   <p className='m-0'>Duration : 00.05.41</p>
                   <p className='m-0'>Data Stream : 2mb</p>
@@ -102,7 +103,7 @@ const DeviceManager: React.FC = () => {
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
                   <IonImg src='IM1.png'/>
                 </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
+                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' ,background: 'rgba(0,0,0,0.5)'}}>
                   <p className='fs-3 mb-1 mt-0'>A1</p>
                   <p className='m-0'>Duration : 00.05.41</p>
                   <p className='m-0'>Data Stream : 2mb</p>
@@ -120,7 +121,7 @@ const DeviceManager: React.FC = () => {
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
                   <IonImg src='IM1.png'/>
                 </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
+                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' ,background: 'rgba(0,0,0,0.5)'}}>
                   <p className='fs-3 mb-1 mt-0'>A1</p>
                   <p className='m-0'>Duration : 00.05.41</p>
                   <p className='m-0'>Data Stream : 2mb</p>
