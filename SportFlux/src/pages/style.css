@@ -1,0 +1,13 @@
+.filter-card{
+    min-height: 90%;
+    min-width: 90%;
+    background-color: white;
+    z-index: 99;
+}
+
+.filter-modal{
+    --width: 80%;
+    --height: 50%;
+    position: absolute;
+    top: -100;
+}

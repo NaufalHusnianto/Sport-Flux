@@ -4,6 +4,8 @@ import getInitialData from "../utils";
 import PersonList from "../components/PersonList";
 import Searchbar from "../components/Searchbar";
 import React from "react";
+import './style.css';
+import Filter from "../components/Filter";
 
 interface Person{
     id: number;
@@ -17,6 +19,7 @@ interface Person{
 interface PersonState{
     persons: Person[];
     keyWord: string;
+    showFilter: boolean;
 }
 
 class Physiotherapist extends React.Component<{}, PersonState>{
@@ -25,20 +28,32 @@ class Physiotherapist extends React.Component<{}, PersonState>{
 
         this.state = {
             persons: getInitialData(),
-            keyWord: ''
+            keyWord: '',
+            showFilter: false
         };
 
         this.onSearchHandler = this.onSearchHandler.bind(this);
+        this.closeFilter = this.closeFilter.bind(this);
+        this.openFilter = this.openFilter.bind(this);
     }
 
     onSearchHandler({name}: {name: string}){
         this.setState({keyWord: name});
     }
 
+    openFilter(){
+        this.setState({showFilter: true});
+    }
+
+    closeFilter(){
+        this.setState({showFilter: false});
+    }
+
     render(){
         return(
             <IonPage>
                 <IonContent color={"tertiary"}>
+                    <Filter isOpen={this.state.showFilter} onClose={this.closeFilter}/>
                     <IonHeader className='ion-no-border'>
                     <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
                         <IonGrid>
@@ -47,7 +62,8 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                                     <Searchbar search={(searchTerm: string) => this.onSearchHandler({name: searchTerm})}/>
                                 </IonCol>
                                 <IonCol size="2">
-                                    <IonImg src='/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}/>
+                                    <IonImg src='/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}
+                                    onClick={this.openFilter}/>
                                     <div></div>
                                 </IonCol>
                             </IonRow>
