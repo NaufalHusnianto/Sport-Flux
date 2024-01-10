@@ -84,10 +84,8 @@ const App: React.FC = () => (
           <IonTabButton tab="DeviceManager" href="/device-manager">
             <IonIcon aria-hidden="true" icon={desktop} color='light'/>
           </IonTabButton>
-          <IonTabButton tab="activity" href="/activity">
-            <div className='text-white text-center fs-1 p-1 w-100 h-100' style={{background: '#122D3B', borderBottomRightRadius: '9999px', borderBottomLeftRadius: '9999px', border: 'solid 2px white'}}>
-              <IonIcon aria-hidden="true" icon={analytics} color='light'/>
-            </div>
+          <IonTabButton tab="activity" href="/activity" style={{background: '#122D3B', borderBottomRightRadius: '9999px', borderBottomLeftRadius: '9999px', border: 'solid 2px black'}}>
+            <IonIcon aria-hidden="true" icon={analytics} color='light'/>
           </IonTabButton>
           <IonTabButton tab="community" href="/community">
             <IonIcon aria-hidden="true" icon={people} color='light'/>
