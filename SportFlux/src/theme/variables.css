@@ -91,7 +91,8 @@ html {
 }
 
 ion-tab-bar {
-  --background: #435973;
+  --background: rgba(62,114,144,0.5);
+  
 }
 
 .ion-color-login-page {
@@ -101,4 +102,8 @@ ion-tab-bar {
   --ion-color-contrast-rgb: var(--ion-color-login-page-contrast-rgb);
   --ion-color-shade: var(--ion-color-login-page-shade);
   --ion-color-tint: var(--ion-color-login-page-tint);
+}
+
+ion-button {
+  --border-radius: 10px;
 }

@@ -55,7 +55,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                 <IonContent color={"tertiary"}>
                     <Filter isOpen={this.state.showFilter} onClose={this.closeFilter}/>
                     <IonHeader className='ion-no-border'>
-                    <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)'}} color={'primary'}>
+                    <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} color={'primary'}>
                         <IonGrid>
                             <IonRow>
                                 <IonCol size="10">
@@ -70,8 +70,8 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                             <IonRow>
                                 <IonCol className="d-flex">
                                     <p className="ms-3 me-3">Suggestion: </p>
-                                    <p style={{background: 'gold'}} className="text-black rounded-pill ps-2 pe-2 ms-1 me-1">Manual</p>
-                                    <p style={{background: 'gold'}} className="text-black rounded-pill ps-2 pe-2 ms-1 me-1">FisioNeurologis</p>
+                                    <p style={{background: 'gold', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className="text-black rounded-pill ps-2 pe-2 ms-1 me-1">Manual</p>
+                                    <p style={{background: 'gold', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className="text-black rounded-pill ps-2 pe-2 ms-1 me-1">FisioNeurologis</p>
                                 </IonCol>
                             </IonRow>
                         </IonGrid>
@@ -79,12 +79,12 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                     </IonHeader>
     
                     
-                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
+                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} >
                         <IonCardHeader>
                             <IonCardTitle className='fw-bold fs-5'>Recomendation</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent >
-                            <IonCard color={"secondary"} className="m-0 rounded-4">
+                            <IonCard color={"secondary"} className="m-0 rounded-4" style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
                                 <IonGrid>
                                     <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                                         <IonCol size='4' className='text-center text-white d-flex flex-column justify-content-center m-0'>
@@ -101,9 +101,9 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                             </IonCard>
                         </IonCardContent>
                     </IonCard>
-                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)'}} >
+                    <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} >
                         <IonCardHeader>
-                            <IonCardTitle className='fw-bold fs-5 bg-white text-black text-center rounded-pill'>Physiotherapist  List</IonCardTitle>
+                            <IonCardTitle className='fw-bold fs-5 bg-white text-black text-center rounded-pill' style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>Physiotherapist  List</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
                             <PersonList persons={this.state.persons.filter(

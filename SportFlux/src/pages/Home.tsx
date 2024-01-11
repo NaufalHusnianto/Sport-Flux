@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
-      <IonImg src="/IM2.png" style={{ position: 'absolute', top: '70%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.3, zIndex: -1}} />
+      <IonImg src="/IM2.png" style={{ position: 'fixed', top: '75%', left: '50%', transform: 'translate(-50%, -50%)', width: '70%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
         {/* HEADER */}
         <IonHeader className='ion-no-border'>
           <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
               </IonRow>
               <IonRow className='mt-0'>
                 <IonCol className='text-center'>
-                  <IonButton className='mt-0 mb-3' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Dashboard</IonButton>
+                  <IonButton className='mt-0 mb-3' href='/device-manager' style={{width: '50%', borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Start</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>

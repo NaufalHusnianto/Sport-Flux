@@ -4,7 +4,7 @@ import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonGrid, IonRow, 
 function PersonItemContent({ name, category, location, tag, rating }) {
     return (
         <>
-                <IonCard color={"secondary"} className="ms-0 me-0 mt-3 mb-3  rounded-4">
+                <IonCard color={"secondary"} className="ms-0 me-0 mt-3 mb-3  rounded-4" style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
                     <IonGrid>
                         <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                             <IonCol size='4' className='text-center text-white d-flex flex-column justify-content-center m-0'>

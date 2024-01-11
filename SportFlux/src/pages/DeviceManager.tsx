@@ -6,7 +6,7 @@ const DeviceManager: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'} >
-      <IonImg src="/IM2.png" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
+      <IonImg src="/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
         {/* header  */}
         <IonHeader className='ion-no-border'>
           <IonToolbar style={{ position: 'fixed', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
@@ -43,7 +43,7 @@ const DeviceManager: React.FC = () => {
             <p style={{ margin: 'auto', width: '50%', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className='bg-white rounded-pill text-black fs-7 p-2'>Owned Device</p>
           </IonCardTitle>
 
-          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
+          <IonCard color={'primary'} href='/diagnose' style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
             <IonGrid>
               <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
                 <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
