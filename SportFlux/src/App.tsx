@@ -40,6 +40,7 @@ import './theme/variables.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Trainer from './pages/Trainer';
 import Diagnose from './pages/Diagnose';
+import ConsultationChat from './pages/ConsultationChat';
 
 
 setupIonicReact();
@@ -70,7 +71,7 @@ const App: React.FC = () => (
           <Route exact path="/trainer">
             <Trainer />
           </Route>
-          <Route exact path="/Diagnose">
+          <Route exact path="/diagnose">
             <Diagnose />
           </Route>
           <Route exact path="/">
@@ -100,6 +101,9 @@ const App: React.FC = () => (
       </Route>
       <Route exact path="/forgetpassword">
         <ForgetPassword />
+      </Route>
+      <Route exact path="/consultationchat">
+        <ConsultationChat />
       </Route>
     </IonReactRouter>
   </IonApp>
