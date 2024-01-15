@@ -1,13 +1,15 @@
 import { IonContent, IonAvatar, IonCardContent, IonCardTitle, IonPage, IonHeader, IonToolbar, IonCard, IonGrid, IonRow, IonCol, IonImg, IonItem, IonInput, IonFooter, IonIcon } from "@ionic/react";
 import { send } from "ionicons/icons";
 import React from "react";
+import UserChat from "../components/chat/UserChat";
+import ProviderChat from "../components/chat/ProviderChat";
 
 class ConsultationChat extends React.Component {
     render() {
         return(
             <IonPage>
                 <IonContent color={"tertiary"}>
-                <IonImg src="/LOGO.png" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '70%', height: 'auto', opacity: 0.3 , zIndex: -1}} />
+                <IonImg src="/LOGO.png" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '90%', height: 'auto', opacity: 0.3 , zIndex: -1}} />
                     <IonHeader className='ion-no-border mb-4'>
                         <IonToolbar style={{position: 'fixed', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
                             <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
@@ -22,26 +24,14 @@ class ConsultationChat extends React.Component {
                         </IonToolbar>
                     </IonHeader>
 
-                    <IonCard style={{ top: '10vh', background: 'rgba(0, 0, 0, 0)', boxShadow: 'none' }}>
-                        {/* Chat e neng kene */}
-                        <IonCard className="d-flex justify-content-end mb-2" style={{ background: 'rgba(0, 0, 0, 0)', boxShadow: 'none'}}>
-                            <IonAvatar>
-                                <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-                            </IonAvatar>
-                            <IonCard style={{width: '70%', borderRadius: '20px'}} className="pt-3 pe-3 ps-3">
-                                <p className="text-black">Permisi kak !!</p>
-                            </IonCard>
-                        </IonCard>
-                        <IonCard className="d-flex justify-content-start mb-2" style={{ background: 'rgba(0, 0, 0, 0)', boxShadow: 'none'}}>
-                            <IonAvatar>
-                                <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-                            </IonAvatar>
-                            <IonCard style={{width: '70%', borderRadius: '20px'}} className="pt-3 pe-3 ps-3">
-                                <p className="text-black">Permisi kak !!</p>
-                            </IonCard>
-                        </IonCard>
-                        {/* Chat e neng kene */}
-                    </IonCard>
+                    <div style={{ marginBottom: '2vh', marginTop: '15vh' }}>
+                        {/* Chat dari Pengguna */}
+                        <UserChat message="Permisi Kak!" username="Alex"/>
+                        {/* Chat dari pengguna */}
+                        {/* Chat dari layanan */}
+                        <ProviderChat message="Halo kak!, ada yang bisa saya bantu ?" username="Steve"/>
+                        {/* Chat dari Layanan */}
+                    </div>
 
                     <IonFooter style={{position: 'fixed', bottom: 0, width: '100%'}} className="ion-no-border">
                         <IonToolbar color="primary" className="p-3" style={{borderTopLeftRadius: '50px', borderTopRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
