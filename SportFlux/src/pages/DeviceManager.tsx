@@ -1,8 +1,25 @@
 import { IonCard, IonIcon, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonTitle, IonToolbar  } from '@ionic/react';
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { settings } from 'ionicons/icons';
+import OwnedDevice from '../components/OwnedDevice';
 
 const DeviceManager: React.FC = () => {
+  const [connectedDevices, setConnectedDevices] = useState<number>(0);
+
+  useEffect(() => {
+    // hittung jumlah device yang terpasang
+    const calculateConnectedDevices = () => {
+      const ownedDeviceElements = document.getElementsByClassName('owned-device');
+      const totalConnectedDevices = ownedDeviceElements.length;
+
+      setConnectedDevices(totalConnectedDevices);
+    };
+
+    calculateConnectedDevices();
+  }, []);
+
   return (
     <IonPage>
       <IonContent color={'tertiary'} >
@@ -24,7 +41,7 @@ const DeviceManager: React.FC = () => {
                   <div style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
                     <div className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
                       <p className='fs-8 mb-1 mt-0'>Device Connected</p>
-                      <p className='mb-0 fs-1'>20</p>
+                      <p className='mb-0 fs-1'>{connectedDevices}</p>
                     </div>
                     <div className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
                       <p className='fs-8 mb-1 mt-0'>Data Stream</p>
@@ -43,80 +60,15 @@ const DeviceManager: React.FC = () => {
             <p style={{ margin: 'auto', width: '50%', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className='bg-white rounded-pill text-black fs-7 p-2'>Owned Device</p>
           </IonCardTitle>
 
-          <IonCard color={'primary'} href='/diagnose' style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-            <IonGrid>
-              <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
-                <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
-                  <IonImg src='IM1.png'/>
-                </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.3)' }}>
-                  <p className='fs-3 mb-1 mt-0'>A1</p>
-                  <p className='m-0'>Duration : 00.05.41</p>
-                  <p className='m-0'>Data Stream : 2mb</p>
-                  <p className='m-0'>Battery Level : 100%</p>
-                  <p className='m-0'>Status : Active</p>
-                  <IonImg src='/Battery.png' style={{width: '25%'}}/>
-                  <IonIcon aria-hidden="true" icon={settings} style={{ position: 'absolute', bottom: '20px', right: '20px', fontSize: '30px' }} />
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </IonCard>
-          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-            <IonGrid>
-              <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
-                <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
-                  <IonImg src='IM1.png'/>
-                </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.3)' }}>
-                  <p className='fs-3 mb-1 mt-0'>A1</p>
-                  <p className='m-0'>Duration : 00.05.41</p>
-                  <p className='m-0'>Data Stream : 2mb</p>
-                  <p className='m-0'>Battery Level : 100%</p>
-                  <p className='m-0'>Status : Active</p>
-                  <IonImg src='/Battery.png' style={{width: '25%'}}/>
-                  <IonIcon aria-hidden="true" icon={settings} style={{ position: 'absolute', bottom: '20px', right: '20px', fontSize: '30px' }} />
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </IonCard>
-          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-            <IonGrid>
-              <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
-                <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
-                  <IonImg src='IM1.png'/>
-                </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.3)' }}>
-                  <p className='fs-3 mb-1 mt-0'>A1</p>
-                  <p className='m-0'>Duration : 00.05.41</p>
-                  <p className='m-0'>Data Stream : 2mb</p>
-                  <p className='m-0'>Battery Level : 100%</p>
-                  <p className='m-0'>Status : Active</p>
-                  <IonImg src='/Battery.png' style={{width: '25%'}}/>
-                  <IonIcon aria-hidden="true" icon={settings} style={{ position: 'absolute', bottom: '20px', right: '20px', fontSize: '30px' }} />
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </IonCard>
-          <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-            <IonGrid>
-              <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
-                <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
-                  <IonImg src='IM1.png'/>
-                </IonCol>
-                <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.3)' }}>
-                  <p className='fs-3 mb-1 mt-0'>A1</p>
-                  <p className='m-0'>Duration : 00.05.41</p>
-                  <p className='m-0'>Data Stream : 2mb</p>
-                  <p className='m-0'>Battery Level : 100%</p>
-                  <p className='m-0'>Status : Active</p>
-                  <IonImg src='/Battery.png' style={{width: '25%'}}/>
-                  <IonIcon aria-hidden="true" icon={settings} style={{ position: 'absolute', bottom: '20px', right: '20px', fontSize: '30px' }} />
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </IonCard>
+          {/* Import dari OwnedDevice.tsx */}
+          <OwnedDevice/>
+          <OwnedDevice/>
+          <OwnedDevice/>
+          <OwnedDevice/>
           
         </IonCard>
+
+
       </IonContent>
     </IonPage>
   );

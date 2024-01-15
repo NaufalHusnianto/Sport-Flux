@@ -1,4 +1,5 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar } from '@ionic/react';
+import ActivityRecord from '../components/ActivityRecord';
 
 const ActivityTab: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const ActivityTab: React.FC = () => {
                     <IonImg src='LOGO.png' style={{ width: '30%', height: 'auto' }} />
                   </IonCol>
                 </IonRow>
-                <IonRow>
+                <IonRow className='mb-4'>
                   <IonCol size='4' className='w-100 h-100'>
                     <IonImg src='/profile.png' style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
                   </IonCol>
@@ -25,96 +26,22 @@ const ActivityTab: React.FC = () => {
                     </IonCard>
                   </IonCol>
                 </IonRow>
-                <IonRow className='mt-0'>
-                  <IonCol className='text-center'>
-                    <IonButton className='mt-0 mb-4' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Change Profile</IonButton>
-                  </IonCol>
-                </IonRow>
               </IonGrid>
             </IonToolbar>
           </IonHeader>
 
-          <IonCard color={'primary'} style={{ top: '30vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.5)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
+          <IonCard color={'primary'} style={{ top: '25vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.5)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
             <IonCardTitle className='text-center mt-3 mb-3'>
               <p style={{ margin: 'auto', width: '90%', background: '#122D3B', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className='rounded-pill text-white fs-7 p-1'>My Activity</p>
             </IonCardTitle>
 
-            <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-              <IonGrid>
-                <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: 'rgba(0,0,0,0.5)' }}>
-                  <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p style={{background: 'green'}} className='rounded-pill text-white'>EMG Record</p>
-                    <IonImg src='pulse.png' style={{width: '50%'}} className='m-2'/>
-                  </IonCol>
-                  <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p className='m-0'>Device : 5</p>
-                    <p className='m-0'>Channel : 10</p>
-                    <p className='m-0'>Status : Diagnosed</p>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCard>
-            <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-              <IonGrid>
-                <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: 'rgba(0,0,0,0.5)' }}>
-                  <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p style={{background: 'green'}} className='rounded-pill text-white'>EMG Record</p>
-                    <IonImg src='pulse.png' style={{width: '50%'}} className='m-2'/>
-                  </IonCol>
-                  <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p className='m-0'>Device : 5</p>
-                    <p className='m-0'>Channel : 10</p>
-                    <p className='m-0'>Status : Diagnosed</p>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCard>
-            <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-              <IonGrid>
-                <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: 'rgba(0,0,0,0.5)' }}>
-                  <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p style={{background: 'green'}} className='rounded-pill text-white'>EMG Record</p>
-                    <IonImg src='pulse.png' style={{width: '50%'}} className='m-2'/>
-                  </IonCol>
-                  <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p className='m-0'>Device : 5</p>
-                    <p className='m-0'>Channel : 10</p>
-                    <p className='m-0'>Status : Diagnosed</p>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCard>
-            <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-              <IonGrid>
-                <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: 'rgba(0,0,0,0.5)' }}>
-                  <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p style={{background: 'green'}} className='rounded-pill text-white'>EMG Record</p>
-                    <IonImg src='pulse.png' style={{width: '50%'}} className='m-2'/>
-                  </IonCol>
-                  <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p className='m-0'>Device : 5</p>
-                    <p className='m-0'>Channel : 10</p>
-                    <p className='m-0'>Status : Diagnosed</p>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCard>
-            <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-              <IonGrid>
-                <IonRow style={{ display: 'flex', height: '100%', borderRadius: '30px', overflow: 'hidden', background: 'rgba(0,0,0,0.5)' }}>
-                  <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p style={{background: 'green'}} className='rounded-pill text-white'>EMG Record</p>
-                    <IonImg src='pulse.png' style={{width: '50%'}} className='m-2'/>
-                  </IonCol>
-                  <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1' }}>
-                    <p className='m-0'>Device : 5</p>
-                    <p className='m-0'>Channel : 10</p>
-                    <p className='m-0'>Status : Diagnosed</p>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCard>
-
+            {/* Import dari ActivityRecord */}
+            <ActivityRecord />
+            <ActivityRecord />
+            <ActivityRecord />
+            <ActivityRecord />
+            <ActivityRecord />
+            <ActivityRecord />
           
           </IonCard>
       </IonContent>

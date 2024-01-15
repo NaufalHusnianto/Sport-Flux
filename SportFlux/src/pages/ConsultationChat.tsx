@@ -27,10 +27,8 @@ class ConsultationChat extends React.Component {
                     <div style={{ marginBottom: '2vh', marginTop: '15vh' }}>
                         {/* Chat dari Pengguna */}
                         <UserChat message="Permisi Kak!" username="Alex"/>
-                        {/* Chat dari pengguna */}
                         {/* Chat dari layanan */}
                         <ProviderChat message="Halo kak!, ada yang bisa saya bantu ?" username="Steve"/>
-                        {/* Chat dari Layanan */}
                     </div>
 
                     <IonFooter style={{position: 'fixed', bottom: 0, width: '100%'}} className="ion-no-border">
