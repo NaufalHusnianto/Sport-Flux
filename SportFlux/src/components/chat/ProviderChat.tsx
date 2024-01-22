@@ -16,7 +16,7 @@ class ProviderChat extends React.Component<ProviderChatProps> {
 
         return(
             <>
-                <IonCard className="d-flex mb-2" style={{ background: 'rgba(0, 0, 0, 0)', boxShadow: 'none'}}>
+                <IonCard className="d-flex mb-1" style={{ background: 'rgba(0, 0, 0, 0)', boxShadow: 'none'}}>
                     <IonAvatar style={{ height: '100%', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
                         <p className="bg-white text-black text-center rounded-pill" style={{ margin: 0, width: '100%' }}>{username}</p>

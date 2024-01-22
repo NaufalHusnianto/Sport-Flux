@@ -4,7 +4,7 @@ http://ionicframework.com/docs/theming/ */
 /** Ionic CSS Variables **/
 :root {
   /* Primary */
-  --ion-color-primary: #3E7290;
+  --ion-color-primary: radial-gradient(circle at 10% 20%, rgb(149,219,254) 0%, rgb(7,134,197) 90.1%);
 	--ion-color-primary-rgb: 62,114,144;
 	--ion-color-primary-contrast: #ffffff;
 	--ion-color-primary-contrast-rgb: 255,255,255;
@@ -20,7 +20,7 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-secondary-tint: #2a424f;
 
   /* Tertiary */
-	--ion-color-tertiary: #6DBFEB;
+	--ion-color-tertiary: radial-gradient(circle at 10% 20%, rgb(149,219,254) 0%, rgb(7,134,197) 90.1%);
 	--ion-color-tertiary-rgb: 109,191,235;
 	--ion-color-tertiary-contrast: #000000;
 	--ion-color-tertiary-contrast-rgb: 0,0,0;
@@ -28,7 +28,7 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-tertiary-tint: #7cc5ed;
 
   /** success **/
-  --ion-color-success: #2dd36f;
+  --ion-color-success: #6DBFEB;
   --ion-color-success-rgb: 45, 211, 111;
   --ion-color-success-contrast: #ffffff;
   --ion-color-success-contrast-rgb: 255, 255, 255;

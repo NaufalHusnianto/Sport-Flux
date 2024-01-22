@@ -5,9 +5,8 @@ const ActivityTab: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
-      <IonImg src="/IM2.png" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
-        <IonHeader className='ion-no-border mb-4'>
-            <IonToolbar style={{ position: 'fixed', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.5)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
+      <IonImg src="/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
+        <IonCard className='ion-no-border m-0' style={{ position: 'absolute', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
               <IonGrid>
                 <IonRow>
                   <IonCol className='d-flex justify-content-center align-item-center'>
@@ -27,8 +26,7 @@ const ActivityTab: React.FC = () => {
                   </IonCol>
                 </IonRow>
               </IonGrid>
-            </IonToolbar>
-          </IonHeader>
+        </IonCard>
 
           <IonCard color={'primary'} style={{ top: '25vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.5)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
             <IonCardTitle className='text-center mt-3 mb-3'>

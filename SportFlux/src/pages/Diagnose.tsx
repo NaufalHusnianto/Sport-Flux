@@ -7,10 +7,9 @@ const Diagnose: React.FC = () => {
     return (
         <IonPage>
             <IonContent color={"tertiary"}>
-            <IonImg src="/IM2.png" style={{ position: 'fixed', top: '75%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.3, zIndex: -1}} />
-                <IonHeader className='ion-no-border mb-4'>
-                    <IonToolbar style={{position: 'fixed', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
-                        <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
+            <IonImg src="/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.3, zIndex: -1}} />
+                <IonCard className='ion-no-border m-0' style={{ position: 'absolute', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
+                        <IonCard color={'primary'} className="mt-2" style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
                             <IonGrid>
                                 <IonRow>
                                     <IonCol className='d-flex justify-content-center align-item-center'>
@@ -48,8 +47,7 @@ const Diagnose: React.FC = () => {
                                 </IonRow>
                             </IonGrid>
                         </IonCard>
-                    </IonToolbar>
-                </IonHeader>
+                </IonCard>
 
                 <IonCard className='mt-5' color={'primary'} style={{ top: '20vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.5)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
                     <IonGrid>

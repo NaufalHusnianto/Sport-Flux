@@ -8,7 +8,7 @@ class OwnedDevice extends React.Component {
             <div className="owned-device">
                 <IonCard color={'primary'} href='/diagnose' style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
                     <IonGrid>
-                        <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
+                        <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '2px 2px 3px #0b0b0b' }}>
                             <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
                                 <IonImg src='IM1.png'/>
                             </IonCol>

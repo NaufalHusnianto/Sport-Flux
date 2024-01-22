@@ -54,8 +54,7 @@ class Trainer extends React.Component<{}, PersonState>{
         <IonPage>
             <IonContent color={"tertiary"}>
                 <Filter isOpen={this.state.showFilter} onClose={this.closeFilter}/>
-                <IonHeader className='ion-no-border'>
-                <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} color={'primary'}>
+                <IonCard className='ion-no-border m-0' style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
                     <IonGrid>
                         <IonRow>
                             <IonCol size="10">
@@ -75,8 +74,7 @@ class Trainer extends React.Component<{}, PersonState>{
                             </IonCol>
                         </IonRow>
                     </IonGrid>
-                </IonToolbar>
-                </IonHeader>
+                </IonCard>
 
                 <IonCard color={'primary'} className='mt-4 mb-4' style={{borderRadius: '25px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} >
                     <IonCardHeader>

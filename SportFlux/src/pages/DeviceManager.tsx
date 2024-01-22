@@ -1,4 +1,4 @@
-import { IonCard, IonIcon, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonTitle, IonToolbar  } from '@ionic/react';
+import { IonCard, IonIcon, IonCardTitle, IonCol, IonContent, IonButton, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonTitle, IonToolbar  } from '@ionic/react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import { useState, useEffect } from 'react';
@@ -22,11 +22,10 @@ const DeviceManager: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent color={'tertiary'} >
+      <IonContent color={'tertiary'}>
       <IonImg src="/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
         {/* header  */}
-        <IonHeader className='ion-no-border'>
-          <IonToolbar style={{ position: 'fixed', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
+        <IonCard className='ion-no-border m-0' style={{ position: 'absolute', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
             <IonGrid className='mb-2'>
               <IonRow>
                 <IonCol className='d-flex justify-content-center align-item-center'>
@@ -40,24 +39,23 @@ const DeviceManager: React.FC = () => {
                 <IonCol size='8' className='pt-3 pb-3 pe-3'>
                   <div style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
                     <div className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#122D3B' }}>
-                      <p className='fs-8 mb-1 mt-0'>Device Connected</p>
-                      <p className='mb-0 fs-1'>{connectedDevices}</p>
+                      <p className='fs-8 mb-1 mt-0 fw-bold'>Device Connected</p>
+                      <p className='mb-0 fs-1 fw-bold'>{connectedDevices}</p>
                     </div>
                     <div className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', backgroundColor: '#6DBFEB' }}>
-                      <p className='fs-8 mb-1 mt-0'>Data Stream</p>
-                      <p className='mb-0 fs-1'>20</p>
+                      <p className='fs-8 mb-1 mt-0 fw-bold'>Data Stream</p>
+                      <p className='mb-0 fs-1 fw-bold'>20</p>
                     </div>
                   </div>
                 </IonCol>
               </IonRow>
             </IonGrid>
-          </IonToolbar>
-        </IonHeader>
+        </IonCard>
 
       {/* content */}
-        <IonCard className='mt-4' color={'primary'} style={{ top: '25vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
+        <IonCard className='mt-0' color={'primary'} style={{ top: '25vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.15)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
           <IonCardTitle className='text-center mt-3'>
-            <p style={{ margin: 'auto', width: '50%', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className='bg-white rounded-pill text-black fs-7 p-2'>Owned Device</p>
+            <p style={{ margin: 'auto', width: '50%', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className='bg-white rounded-pill text-black fs-4 p-2'>Owned Device</p>
           </IonCardTitle>
 
           {/* Import dari OwnedDevice.tsx */}

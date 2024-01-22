@@ -6,8 +6,7 @@ const Community: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
-        <IonHeader className='ion-no-border'>
-          <IonToolbar style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'primary'}>
+        <IonCard className='ion-no-border m-0' style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
             <IonGrid>
               <IonRow>
                 <IonCol className='d-flex justify-content-center align-item-center'>
@@ -32,8 +31,7 @@ const Community: React.FC = () => {
                 </IonCol>
               </IonRow>
             </IonGrid>
-          </IonToolbar>
-        </IonHeader>
+        </IonCard>
       </IonContent>
     </IonPage>
   )

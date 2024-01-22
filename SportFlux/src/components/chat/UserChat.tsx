@@ -16,7 +16,7 @@ class UserChat extends React.Component<UserChatProps> {
 
         return (
             <>
-                <IonCard className="d-flex justify-content-end mb-2" style={{ background: 'rgba(0, 0, 0, 0)', boxShadow: 'none' }}>
+                <IonCard className="d-flex justify-content-end mb-1" style={{ background: 'rgba(0, 0, 0, 0)', boxShadow: 'none' }}>
                     <IonCard style={{ width: '80%', borderRadius: '20px' }} className="pt-3 pe-3 ps-3">
                         <p className="text-black">{message}</p>
                     </IonCard>
