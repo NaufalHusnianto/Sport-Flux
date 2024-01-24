@@ -1,6 +1,9 @@
 import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRouterLink, IonRow, IonToolbar } from '@ionic/react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignalChart from '../components/SignalChart';
+import { BsTelegram } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+import { BsChatRightTextFill } from "react-icons/bs";
 
 const Community: React.FC = () => {
   return (
@@ -32,6 +35,70 @@ const Community: React.FC = () => {
               </IonRow>
             </IonGrid>
         </IonCard>
+
+        {/* content  */}
+        <IonGrid>
+          <IonRow className='d-flex justify-content-center'>
+            <IonCol size='6'>
+              <IonCard color={'secondary'} className='d-flex justify-content-center flex-column text-center'>
+                <BsWhatsapp style={{fontSize: "50px", marginLeft: "35%", marginTop: "10%", marginBottom: "10%"}}/>
+                <p>Whatsapp</p>
+              </IonCard>
+            </IonCol>
+            <IonCol size='6'>
+              <IonCard color={'secondary'} className='d-flex flex-column text-center'>
+                <BsTelegram style={{fontSize: "50px", marginLeft: "35%", marginTop: "10%", marginBottom: "10%"}}/>
+                <p>Telegram</p>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+          {/* forum  */}
+          <IonRow>
+            <IonCol size='12'>
+              <IonCard color={'secondary'} className='d-flex align-items-center' style={{fontSize:"13pt", fontWeight:"bold"}}>
+                <BsChatRightTextFill style={{fontSize:"25px", margin:"15px"}} />
+                <p style={{ margin: 0, alignSelf: 'center' }}>Football Community</p>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol size='12'>
+              <IonCard color={'secondary'} className='d-flex align-items-center' style={{fontSize:"13pt", fontWeight:"bold"}}>
+                <BsChatRightTextFill style={{fontSize:"25px", margin:"15px"}} />
+                <p style={{ margin: 0, alignSelf: 'center' }}>Swimming Community</p>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol size='12'>
+              <IonCard color={'secondary'} className='d-flex align-items-center' style={{fontSize:"13pt", fontWeight:"bold"}}>
+                <BsChatRightTextFill style={{fontSize:"25px", margin:"15px"}} />
+                <p style={{ margin: 0, alignSelf: 'center' }}>Athletic Community</p>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol size='12'>
+              <IonCard color={'secondary'} className='d-flex align-items-center' style={{fontSize:"13pt", fontWeight:"bold"}}>
+                <BsChatRightTextFill style={{fontSize:"25px", margin:"15px"}} />
+                <p style={{ margin: 0, alignSelf: 'center' }}>Fitness Community</p>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol size='12'>
+              <IonCard color={'secondary'} className='d-flex align-items-center' style={{fontSize:"13pt", fontWeight:"bold"}}>
+                <BsChatRightTextFill style={{fontSize:"25px", margin:"15px"}} />
+                <p style={{ margin: 0, alignSelf: 'center' }}>Running Community</p>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+
+        </IonGrid>
       </IonContent>
     </IonPage>
   )
