@@ -53,7 +53,7 @@ const DeviceManager: React.FC = () => {
         </IonCard>
 
       {/* content */}
-        <IonCard className='mt-0' color={'primary'} style={{ top: '25vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.15)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
+        <IonCard className='mt-4' color={'primary'} style={{ top: '25vh', borderRadius: '30px', background: 'rgba(0, 0, 0, 0.15)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}>
           <IonCardTitle className='text-center mt-3'>
             <p style={{ margin: 'auto', width: '50%', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className='bg-white rounded-pill text-black fs-4 p-2'>Owned Device</p>
           </IonCardTitle>
