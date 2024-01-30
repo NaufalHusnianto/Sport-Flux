@@ -5,7 +5,7 @@ import PersonList from "../components/PersonList";
 import Searchbar from "../components/Searchbar";
 import React from "react";
 import './style.css';
-import Filter from "../components/Filter";
+import Filter from "../components/filter/Filter";;
 
 interface Person{
     id: number;
