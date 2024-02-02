@@ -27,6 +27,12 @@ interface PersonState{
     };
 }
 
+interface SelectedCategories {
+    specialist: string[];
+    rating: number[];
+    location: string[];
+}
+
 class Trainer extends React.Component<{}, PersonState>{
     constructor(props: {}){
         super(props);
@@ -45,6 +51,7 @@ class Trainer extends React.Component<{}, PersonState>{
         this.onSearchHandler = this.onSearchHandler.bind(this);
         this.closeFilter = this.closeFilter.bind(this);
         this.openFilter = this.openFilter.bind(this);
+        this.applyFilter = this.applyFilter.bind(this);
     }
 
     onSearchHandler({name}: {name: string}){
@@ -59,11 +66,15 @@ class Trainer extends React.Component<{}, PersonState>{
         this.setState({showFilter: false});
     }
 
+    applyFilter(selected: SelectedCategories){
+        this.setState({selectedCategories: selected})
+    }
+
     render(){
         return(
         <IonPage>
             <IonContent color={"tertiary"}>
-                <Filter isOpen={this.state.showFilter} onClose={this.closeFilter}/>
+            <Filter openFilter="open-filter" applyFilter={this.applyFilter} />
                 <IonCard className='ion-no-border m-0' style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
                     <IonGrid>
                         <IonRow>
@@ -72,7 +83,7 @@ class Trainer extends React.Component<{}, PersonState>{
                             </IonCol>
                             <IonCol size="2">
                                 <IonImg src='/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}
-                                onClick={this.openFilter}/>
+                                id="open-filter"/>
                                 <div></div>
                             </IonCol>
                         </IonRow>
