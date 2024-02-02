@@ -10,7 +10,7 @@ import './style.css';
 interface Person{
     id: number;
     name: string;
-    category: string[];
+    specialist: string[];
     rating: number;
     location: string;
     tag: string[];
@@ -20,6 +20,11 @@ interface PersonState{
     persons: Person[];
     keyWord: string;
     showFilter: boolean;
+    selectedCategories: {
+        specialist: string[],
+        rating: number[],
+        location: string[]
+    };
 }
 
 class Trainer extends React.Component<{}, PersonState>{
@@ -29,7 +34,12 @@ class Trainer extends React.Component<{}, PersonState>{
         this.state = {
             persons: getInitialData(),
             keyWord: '',
-            showFilter: false
+            showFilter: false,
+            selectedCategories: {
+                specialist: [],
+                rating: [],
+                location: []
+            }
         };
 
         this.onSearchHandler = this.onSearchHandler.bind(this);
@@ -108,6 +118,7 @@ class Trainer extends React.Component<{}, PersonState>{
                                 person => person.name.toLowerCase().includes(this.state.keyWord.toLowerCase())
                             )} 
                             type={'trainer'}
+                            selectedCategories={this.state.selectedCategories}
                             />
                     </IonCardContent>
                 </IonCard>

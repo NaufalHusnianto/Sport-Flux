@@ -1,20 +1,21 @@
 import React from "react";
 import FilterOption from "./FilterOption";
-import { FilterProps } from "./InterfaceFilter";
+import { FilterOptionProps } from "./InterfaceFilter";
 import { IonButtons } from "@ionic/react";
 
-interface FilterListProps extends FilterProps {
+interface FilterListProps extends FilterOptionProps {
     options: string[];
 }
 
-const FilterList: React.FC<FilterListProps> = ({selectedCategories, options, handleButtonClick}) => {
+const FilterList: React.FC<FilterListProps> = ({selectedCategories, category, options, handleButtonClick}) => {
     const renderedOptions = options.map((option)=>{
         return(
             <FilterOption
              key={option}
              selectedCategories={selectedCategories}
              option={option}
-             handleButtonClick={handleButtonClick}
+             handleButtonClick={() => handleButtonClick(option, category)}
+             category={category}
              />
         )
     });

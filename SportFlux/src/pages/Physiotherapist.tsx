@@ -5,12 +5,12 @@ import PersonList from "../components/PersonList";
 import Searchbar from "../components/Searchbar";
 import React from "react";
 import './style.css';
-import Filter from "../components/filter/Filter";;
+import Filter from "../components/filter/Filter";
 
 interface Person{
     id: number;
     name: string;
-    category: string[];
+    specialist: string[];
     rating: number;
     location: string;
     tag: string[];
@@ -19,7 +19,11 @@ interface Person{
 interface PersonState{
     persons: Person[];
     keyWord: string;
-    showFilter: boolean;
+    selectedCategories: {
+        specialist: string[],
+        rating: number[],
+        location: string[]
+    }
 }
 
 class Physiotherapist extends React.Component<{}, PersonState>{
@@ -29,31 +33,29 @@ class Physiotherapist extends React.Component<{}, PersonState>{
         this.state = {
             persons: getInitialData(),
             keyWord: '',
-            showFilter: false
+            selectedCategories: {
+                specialist: [],
+                rating: [],
+                location: []
+            }
         };
 
         this.onSearchHandler = this.onSearchHandler.bind(this);
-        this.closeFilter = this.closeFilter.bind(this);
-        this.openFilter = this.openFilter.bind(this);
     }
 
     onSearchHandler({name}: {name: string}){
         this.setState({keyWord: name});
     }
 
-    openFilter(){
-        this.setState({showFilter: true});
-    }
+    applyFilter(){
 
-    closeFilter(){
-        this.setState({showFilter: false});
     }
 
     render(){
         return(
             <IonPage>
                 <IonContent color={"tertiary"}>
-                    <Filter isOpen={this.state.showFilter} onClose={this.closeFilter}/>
+                    <Filter openFilter="open-filter"/>
                     <IonCard className='ion-no-border m-0' style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
                         <IonGrid>
                             <IonRow>
@@ -62,7 +64,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                                 </IonCol>
                                 <IonCol size="2">
                                     <IonImg src='/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}
-                                    onClick={this.openFilter}/>
+                                    id="open-filter"/>
                                     <div></div>
                                 </IonCol>
                             </IonRow>
@@ -108,6 +110,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                                 person => person.name.toLowerCase().includes(this.state.keyWord.toLowerCase())
                             )} 
                             type={'physiotherapy'}
+                            selectedCategories={this.state.selectedCategories}
                             />
                         </IonCardContent>
                     </IonCard>

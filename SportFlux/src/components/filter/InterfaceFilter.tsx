@@ -1,6 +1,17 @@
 export interface FilterProps{
-    selectedCategories: string[],
+    selectedCategories: {
+        specialist: string[],
+        rating: number[],
+        location: string[]
+    }
     option: string,
-    handleButtonClick: (option: string) => void, 
-
+    handleButtonClick: (option: string | number, category: string) => void,
+    category: string 
 }
+export interface FilterOptionProps {
+    selectedCategories: (string | number)[],
+    option: string | number,
+    handleButtonClick: (option: string | number, category: string) => void,
+    category: string 
+}
+
