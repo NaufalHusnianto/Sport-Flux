@@ -44,14 +44,14 @@ const UserProfile: React.FC = () => {
                   </IonCard>
                 </IonCol>
               </IonRow>
-              <IonRow className='mt-0'>
+              <IonRow className='mt-2 mb-2'>
                 <IonCol className='text-center'>
-                  <IonButton className='mt-0 mb-4 w-100' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Change Profile</IonButton>
+                  <IonButton className='mt-0 w-50' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Change Profile</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
         </IonCard>
-        <IonCard className='ion-no-border mt-4 m-0' style={{ borderRadius: '50px 50px 0 0', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
+        <IonCard className='ion-no-border mt-4 m-0' style={{ borderRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
             <IonCardHeader className='p-3 m-4' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>
                <IonCardTitle className='ion-text-center' style={{ fontSize: '20px' }}>My Activity</IonCardTitle>
             </IonCardHeader>
@@ -172,9 +172,8 @@ const UserProfile: React.FC = () => {
                 </IonList>
             </IonCardContent>
         </IonCard>
-
-        <IonCard className='ion-no-border mt-4 m-0' style={{ borderRadius: '50px 50px 0 0', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
-            <IonButton onClick={handleLogout} className='mt-0 mb-4 w-100' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Logout</IonButton>
+        <IonCard className='ion-no-border ps-4 pe-4 text-center' style={{ background: 'transparent', border: 'none', borderRadius: '999px'}}>
+            <IonButton onClick={handleLogout} className='mt-4 mb-4 w-100 fs-6' style={{ borderRadius: '999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Logout</IonButton>
         </IonCard>
       </IonContent>
     </IonPage>

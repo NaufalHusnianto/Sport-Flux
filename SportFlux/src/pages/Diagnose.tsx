@@ -9,7 +9,7 @@ const Diagnose: React.FC = () => {
             <IonContent color={"tertiary"}>
             <IonImg src="/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.3, zIndex: -1}} />
                 <IonCard className='ion-no-border m-0' style={{ position: 'absolute', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
-                        <IonCard color={'primary'} className="mt-2" style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
+                        <IonCard color={'primary'} className="mt-2 pb-3" style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
                             <IonGrid>
                                 <IonRow>
                                     <IonCol className='d-flex justify-content-center align-item-center'>

@@ -89,7 +89,7 @@ class Trainer extends React.Component<{}, PersonState>{
                         </IonRow>
                         <IonRow>
                             <IonCol className="d-flex">
-                                <p className="ms-3 me-3">Suggestion: </p>
+                                <p className="ms-3 me-3 text-white">Suggestion: </p>
                                 <p style={{background: 'gold', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className="text-black rounded-pill ps-2 pe-2 ms-1 me-1">Renang</p>
                                 <p style={{background: 'gold', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }} className="text-black rounded-pill ps-2 pe-2 ms-1 me-1">Bulu Tangkis</p>
                             </IonCol>
