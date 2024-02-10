@@ -13,7 +13,7 @@ import {
   mailOutline,
   logInSharp,
 } from 'ionicons/icons';
-import { sendUserPasswordResetEmail } from '../firebaseConfig';
+import { sendUserPasswordResetEmail } from '../config/firebaseConfig';
 import './Login.css';
 
 const ForgetPassword: React.FC = () => {

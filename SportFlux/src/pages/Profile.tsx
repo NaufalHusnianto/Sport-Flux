@@ -1,6 +1,6 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar, IonCardHeader, IonCardContent, IonList, IonItem } from '@ionic/react';
 import { settings } from 'ionicons/icons';
-import { logoutUser } from '../firebaseConfig';
+import { logoutUser } from '../config/firebaseConfig';
 import { useHistory } from "react-router-dom";
 
 const UserProfile: React.FC = () => {

@@ -8,13 +8,13 @@ import { History } from "history";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDAwQQle5rJzurucUAi3b5Y8Em9C7htNrM",
-  authDomain: "sportfluxid.firebaseapp.com",
-  projectId: "sportfluxid",
-  storageBucket: "sportfluxid.appspot.com",
-  messagingSenderId: "249134129873",
-  appId: "1:249134129873:web:e69c4883f71399aad85bf0",
-  measurementId: "G-DW3TCZTGZW"
+  apiKey: "AIzaSyByo9O54h7VHKlrPFGi8r24eT7PxyXopbg",
+  authDomain: "sport-flux.firebaseapp.com",
+  projectId: "sport-flux",
+  storageBucket: "sport-flux.appspot.com",
+  messagingSenderId: "313207685077",
+  appId: "1:313207685077:web:f7568094c4227085a9475c",
+  measurementId: "G-M7LVD6FB38"
 };
 
 // Initialize Firebase

@@ -22,13 +22,13 @@ import {
   mailOutline,
   personAddOutline
 } from 'ionicons/icons';
-import { loginUser } from '../firebaseConfig';
+import { loginUser } from '../config/firebaseConfig';
 import './Login.css';
 
 
 // This is login via Google
 import { signInWithPopup, GoogleAuthProvider, sendEmailVerification , sendPasswordResetEmail} from "firebase/auth";
-import { auth } from "../firebaseConfig";
+import { auth } from "../config/firebaseConfig";
 
 
 const Login: React.FC = () => {
