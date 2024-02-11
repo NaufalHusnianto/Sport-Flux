@@ -10,7 +10,7 @@ class OwnedDevice extends React.Component {
                     <IonGrid>
                         <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '2px 2px 3px #0b0b0b' }}>
                             <IonCol size='5' className='text-center text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.7)' }}>
-                                <IonImg src='IM1.png'/>
+                                <IonImg src='/Assets/img/IM1.png'/>
                             </IonCol>
                             <IonCol size='7' className='text-left text-white p-3 d-flex flex-column justify-content-center' style={{ flex: '1', background: 'rgba(0,0,0,0.3)' }}>
                                 <p className='fs-3 mb-1 mt-0'>A1</p>
@@ -18,7 +18,7 @@ class OwnedDevice extends React.Component {
                                 <p className='m-0'>Data Stream : 2mb</p>
                                 <p className='m-0'>Battery Level : 100%</p>
                                 <p className='m-0'>Status : Active</p>
-                                <IonImg src='/Battery.png' style={{width: '25%'}}/>
+                                <IonImg src='/Assets/icons/Battery.png' style={{width: '25%'}}/>
                                 <IonIcon aria-hidden="true" icon={settings} style={{ position: 'absolute', bottom: '20px', right: '20px', fontSize: '30px' }} />
                             </IonCol>
                         </IonRow>

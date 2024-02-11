@@ -22,13 +22,13 @@ import {
   mailOutline,
   personAddOutline
 } from 'ionicons/icons';
-import { loginUser } from '../config/firebaseConfig';
+import { loginUser } from '../config/firebase/firebaseConfig';
 import './Login.css';
 
 
 // This is login via Google
 import { signInWithPopup, GoogleAuthProvider, sendEmailVerification , sendPasswordResetEmail} from "firebase/auth";
-import { auth } from "../config/firebaseConfig";
+import { auth } from "../config/firebase/firebaseConfig";
 
 
 const Login: React.FC = () => {
@@ -124,7 +124,7 @@ const Login: React.FC = () => {
           </div>
 
           <div className="logo-container">
-            <img src="google-icon.png" alt="google-icon" width="45px" onClick={handleGoogleLogin}/>
+            <img src="/Assets/icons/google-icon.png" alt="google-icon" width="45px" onClick={handleGoogleLogin}/>
             {/* <img className="facebook" src="facebook-icon.png" alt="facebook-icon" width="30px" onClick={hadnelTwiterLogin}/> */}
           </div>
 

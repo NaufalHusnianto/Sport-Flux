@@ -8,7 +8,7 @@ function PersonItemContent({ name, specialist, location, tag, rating }) {
                     <IonGrid>
                         <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                             <IonCol size='4' className='text-center text-white d-flex flex-column justify-content-center m-0'>
-                                <IonImg src='/profile.png' style={{ background: 'green', boxShadow: '2px 2px black', borderRadius: '20px' }} />
+                                <IonImg src='/Assets/img/profile.png' style={{ background: 'green', boxShadow: '2px 2px black', borderRadius: '20px' }} />
                             </IonCol>
                             <IonCol size='8' className='text-left text-white d-flex flex-column justify-content-center'>
                                 <p className="fw-bold" style={{ fontSize: '.8rem' }}>{specialist}</p>

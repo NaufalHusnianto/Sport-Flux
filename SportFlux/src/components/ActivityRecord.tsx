@@ -13,12 +13,12 @@ class ActivityRecord extends React.Component {
                             </IonCol>
                             <IonCol></IonCol>
                             <IonCol size='auto'>
-                                <IonImg src='/premium_icon.png' style={{width: '50px'}}/>
+                                <IonImg src='/Assets/icons/user-grade/premium_icon.png' style={{width: '50px'}}/>
                             </IonCol>
                         </IonRow>
                         <IonRow className='mb-2'>
                             <IonCol size='3' className='m-0'>
-                                <IonImg src='/pulse.png' className='m-auto' style={{ border: '2px solid #fff', width: '100%', borderRadius: '10px'}}/>
+                                <IonImg src='/Assets/img/pulse.png' className='m-auto' style={{ border: '2px solid #fff', width: '100%', borderRadius: '10px'}}/>
                             </IonCol>
                             <IonCol style={{ fontSize: '13px' }}>
                                 <IonRow>

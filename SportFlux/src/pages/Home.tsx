@@ -6,18 +6,18 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
-      <IonImg src="/IM2.png" style={{ position: 'fixed', top: '75%', left: '50%', transform: 'translate(-50%, -50%)', width: '70%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
+      <IonImg src="/Assets/img/IM2.png" style={{ position: 'fixed', top: '75%', left: '50%', transform: 'translate(-50%, -50%)', width: '70%', height: 'auto', opacity: 0.15 , zIndex: -1}} />
         {/* HEADER */}
         <IonCard className='ion-no-border m-0' style={{ borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
             <IonGrid>
               <IonRow>
                 <IonCol className='d-flex justify-content-center align-item-center'>
-                  <IonImg src='LOGO.png' style={{ width: '30%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/LOGO.png' style={{ width: '30%', height: 'auto' }} />
                 </IonCol>
               </IonRow>
               <IonRow>
                 <IonCol size='4' className='w-100 h-100'>
-                  <IonImg src='/profile.png' style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
+                  <IonImg src='/Assets/img/profile.png' style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
                 </IonCol>
                 <IonCol size='8'>
                   <IonCard className='w-100 p-2 pb-3' color={'secondary'} style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', margin: 0}}>
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                                 <p className='mt-0 mb-1'>SportFlux User 1</p>
                             </IonCol>
                             <IonCol>
-                                <IonImg src='/exclusive_icon.png' style={{width: '20px'}}/>
+                                <IonImg src='/Assets/icons/user-grade/exclusive_icon.png' style={{width: '20px'}}/>
                             </IonCol>
                         </IonRow>
                         <p style={{ background: '#008100', padding: '3px', borderRadius: '10px', width: '80%', marginBottom: '5px'}}>80% healthy</p>
@@ -61,22 +61,22 @@ const Home: React.FC = () => {
             <IonGrid>
               <IonRow>
                 <IonCol className='ms-2 me-2 text-center'>
-                  <IonImg src='/IM2.png' style={{ width: '90%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/IM2.png' style={{ width: '90%', height: 'auto' }} />
                 </IonCol>
                 <IonCol className='ms-2 me-2 text-center'>
-                  <IonImg src='/IM2.png' style={{ width: '90%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/IM2.png' style={{ width: '90%', height: 'auto' }} />
                 </IonCol>
                 <IonCol className='ms-2 me-2 text-center'>
-                  <IonImg src='/IM2.png' style={{ width: '90%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/IM2.png' style={{ width: '90%', height: 'auto' }} />
                 </IonCol>
                 <IonCol className='ms-2 me-2 text-center'>
-                  <IonImg src='/IM2.png' style={{ width: '90%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/IM2.png' style={{ width: '90%', height: 'auto' }} />
                 </IonCol>
                 <IonCol className='ms-2 me-2 text-center'>
-                  <IonImg src='/IM2.png' style={{ width: '90%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/IM2.png' style={{ width: '90%', height: 'auto' }} />
                 </IonCol>
                 <IonCol className='ms-2 me-2 text-center'>
-                  <IonImg src='/IM2.png' style={{ width: '90%', height: 'auto' }} />
+                  <IonImg src='/Assets/img/IM2.png' style={{ width: '90%', height: 'auto' }} />
                 </IonCol>
               </IonRow>
               <IonRow>
@@ -98,14 +98,14 @@ const Home: React.FC = () => {
                 <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
                   <IonRouterLink href='/physiotherapist'>
                     <div className="d-flex align-items-center justify-content-center" style={{ width: '100%', height: '100%' }}>
-                      <IonImg src='/Physiotherapist.png' style={{width: '50%', height: 'auto'}} />
+                      <IonImg src='/Assets/icons/Physiotherapist.png' style={{width: '50%', height: 'auto'}} />
                     </div>
                   </IonRouterLink>
                 </IonCol>
                 <IonCol className='square-box ms-2 me-2 d-flex align-items-center justify-content-center' style={{background: '#122D3B', width: '100px', height: '100px', borderRadius: '15px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
                   <IonRouterLink href='/trainer'>
                     <div className="d-flex align-items-center justify-content-center" style={{ width: '100%', height: '100%' }}>
-                      <IonImg src='/Trainer.png' style={{width: '50%', height: 'auto'}} />
+                      <IonImg src='/Assets/icons/Trainer.png' style={{width: '50%', height: 'auto'}} />
                     </div>
                   </IonRouterLink>
                 </IonCol>

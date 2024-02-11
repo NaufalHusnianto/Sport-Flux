@@ -70,7 +70,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                                     <Searchbar search={(searchTerm: string) => this.onSearchHandler({name: searchTerm})}/>
                                 </IonCol>
                                 <IonCol size="2">
-                                    <IonImg src='/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}
+                                    <IonImg src='/Assets/icons/dark.png' style={{ borderRadius: '20px', width: '37px', height: '37px' }}
                                     id="open-filter"/>
                                     <div></div>
                                 </IonCol>
@@ -95,7 +95,7 @@ class Physiotherapist extends React.Component<{}, PersonState>{
                                 <IonGrid>
                                     <IonRow style={{ display: 'flex', height: '100%', borderRadius: '20px', overflow: 'hidden' }}>
                                         <IonCol size='4' className='text-center text-white d-flex flex-column justify-content-center m-0'>
-                                            <IonImg src='/profile.png' style={{ background: 'green', boxShadow: '2px 2px black', borderRadius: '20px' }}/>
+                                            <IonImg src='/Assets/img/profile.png' style={{ background: 'green', boxShadow: '2px 2px black', borderRadius: '20px' }}/>
                                         </IonCol>
                                         <IonCol size='8' className='text-left text-white d-flex flex-column justify-content-center'>
                                             <p className="fw-bold" style={{fontSize: '.8rem'}}>Fisioterapis Ortopedi</p>
