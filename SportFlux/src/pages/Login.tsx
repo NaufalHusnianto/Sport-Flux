@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   IonButton,
   IonCardContent,
@@ -97,9 +97,7 @@ const Login: React.FC = () => {
           </div>
 
           <div className="register">
-            <p>
-              Don't have an account yet?<a>Register</a>
-            </p>
+            <p>Don't have an account yet? <Link to='/register'>Register</Link></p>
           </div>
         
         

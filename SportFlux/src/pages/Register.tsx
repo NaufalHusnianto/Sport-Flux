@@ -49,7 +49,6 @@ const Register: React.FC = () => {
     <IonPage>
       <IonContent fullscreen className='formContainer'>
         <div className='formWrapper'>
-          <span className="logo">Equinox Chat</span>
           <span className="title">Register</span>
           <form onSubmit={handleSubmit}>
             <IonItem>
