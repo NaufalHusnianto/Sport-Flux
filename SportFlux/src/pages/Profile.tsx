@@ -1,19 +1,22 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar, IonCardHeader, IonCardContent, IonList, IonItem } from '@ionic/react';
 import { settings } from 'ionicons/icons';
-import { logoutUser } from '../config/firebase/firebaseConfig';
+import { useContext } from 'react';
 import { useHistory } from "react-router-dom";
+import { AuthContext } from '../config/context/AuthContext';
+import { signOut } from 'firebase/auth';
+import { auth } from '../config/firebase/firebaseConfig';
 
 const UserProfile: React.FC = () => {
-  const history = useHistory();
-    const handleLogout = async () => {
-    const success = await logoutUser();
-    if (success) {
-      history.push('/login')
-      console.log('Logout successful');
-    } else {
-      console.log('Logout failed');
-    }
-  }
+    const {currentUser} = useContext(AuthContext);
+
+    // Dummy data jika tidak ada yang login
+    const dummyPhotoURL = '/Assets/img/profile.png';
+    const dummyDisplayName = 'Guest';
+  
+    // gunakan untuk menampilan data pengguna
+    const photoURL = currentUser ? currentUser.photoURL : dummyPhotoURL;
+    const displayName = currentUser ? currentUser.displayName : dummyDisplayName;
+
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
@@ -26,13 +29,13 @@ const UserProfile: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonCol size='4' className='w-100 h-100'>
-                  <IonImg src='/Assets/img/profile.png' style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
+                  <IonImg src={photoURL} style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
                 </IonCol>
                 <IonCol size='8'>
                   <IonCard className='w-100 p-2 pb-3' color={'secondary'} style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', margin: 0}}>
                         <IonRow>
                             <IonCol size='auto'>
-                                <p className='mt-0 mb-1'>SportFlux User 1</p>
+                                <p className='mt-0 mb-1'>{displayName}</p>
                             </IonCol>
                             <IonCol>
                                 <IonImg src='/Assets/icons/user-grade/exclusive_icon.png' style={{width: '20px'}}/>
@@ -173,7 +176,7 @@ const UserProfile: React.FC = () => {
             </IonCardContent>
         </IonCard>
         <IonCard className='ion-no-border ps-4 pe-4 text-center' style={{ background: 'transparent', border: 'none', borderRadius: '999px'}}>
-            <IonButton onClick={handleLogout} className='mt-4 mb-4 w-100 fs-6' style={{ borderRadius: '999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Logout</IonButton>
+            <IonButton onClick={() => signOut(auth)} className='mt-4 mb-4 w-100 fs-6' style={{ borderRadius: '999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'} >Logout</IonButton>
         </IonCard>
       </IonContent>
     </IonPage>

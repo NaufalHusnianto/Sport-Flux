@@ -13,25 +13,9 @@ import {
   mailOutline,
   logInSharp,
 } from 'ionicons/icons';
-import { sendUserPasswordResetEmail } from '../config/firebase/firebaseConfig';
 import './Login.css';
 
 const ForgetPassword: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [showErrorToast, setShowErrorToast] = useState(false);
-  const history = useHistory();
-
-  const handleResetPassword = async () => {
-    try {
-      await sendUserPasswordResetEmail(email);
-      history.push('/home');
-      console.log('Password reset email sent successfully');
-    } catch (error) {
-      console.error('Error sending password reset email:', error);
-      setShowErrorToast(true);
-    }
-  };
-
   return (
     <IonPage>
       <IonContent className="ion-padding-top" scrollY={false} color={'login-page'}>
@@ -51,8 +35,6 @@ const ForgetPassword: React.FC = () => {
               name="email"
               className="input-fields"
               placeholder="Email"
-              value={email}
-              onIonChange={(e: any) => setEmail(e.detail.value)}
             >
               <div slot="start">
                 <IonIcon icon={mailOutline} />
@@ -64,8 +46,6 @@ const ForgetPassword: React.FC = () => {
             className="button"
             shape="round"
             expand="block"
-            onClick={handleResetPassword}
-            
           >
             
             Reset

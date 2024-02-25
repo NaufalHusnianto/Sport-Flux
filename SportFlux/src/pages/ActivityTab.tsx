@@ -1,7 +1,19 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar } from '@ionic/react';
 import ActivityRecord from '../components/ActivityRecord';
+import { useContext } from 'react';
+import { AuthContext } from '../config/context/AuthContext';
 
 const ActivityTab: React.FC = () => {
+  const {currentUser} = useContext(AuthContext);
+
+  // Dummy data jika tidak ada yang login
+  const dummyPhotoURL = '/Assets/img/profile.png';
+  const dummyDisplayName = 'Guest';
+    
+  // gunakan untuk menampilan data pengguna
+  const photoURL = currentUser ? currentUser.photoURL : dummyPhotoURL;
+  const displayName = currentUser ? currentUser.displayName : dummyDisplayName;
+
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
@@ -15,13 +27,13 @@ const ActivityTab: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonCol size='4' className='w-100 h-100'>
-                  <IonImg src='/Assets/img/profile.png' style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
+                  <IonImg src={photoURL} style={{ background: 'green', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px' }}/>
                 </IonCol>
                 <IonCol size='8'>
                   <IonCard className='w-100 p-2 pb-3' color={'secondary'} style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', margin: 0}}>
                         <IonRow>
                             <IonCol size='auto'>
-                                <p className='mt-0 mb-1'>SportFlux User 1</p>
+                                <p className='mt-0 mb-1'>{displayName}</p>
                             </IonCol>
                             <IonCol>
                                 <IonImg src='/Assets/icons/user-grade/exclusive_icon.png' style={{width: '20px'}}/>

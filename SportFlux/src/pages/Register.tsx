@@ -1,146 +1,77 @@
-import React, { Component } from "react";
-import { IonButton, IonContent, IonInput, IonPage, IonText } from "@ionic/react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from 'react';
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth, db, storage } from "../config/firebase/firebaseConfig";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { doc, setDoc } from "firebase/firestore";
+import { IonContent, IonPage, IonInput, IonButton, IonLabel, IonItem, IonText } from '@ionic/react';
+import { Link, useHistory } from 'react-router-dom';
 
-class Register extends Component {
-  state = {
-    email: "",
-    password: "",
-  };
+const Register: React.FC = () => {
+  const history = useHistory();
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
-  handleChangeText = (event) => {
-    this.setState({
-      [event.target.id]: event.target.value,
-    });
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const displayName = (e.target as any)[0].value;
+    const email = (e.target as any)[1].value;
+    const password = (e.target as any)[2].value;
+    const file = (e.target as any)[3].files[0];
 
-  handleRegisterSubmit = () => {
-    const auth = getAuth();
-    const { email, password } = this.state;
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+      const storageRef = ref(storage, displayName);
+
+      await uploadBytesResumable(storageRef, file).then(async () => {
+        const downloadURL = await getDownloadURL(storageRef);
+        await updateProfile(res.user, {
+          displayName,
+          photoURL: downloadURL,
+        });
+        await setDoc(doc(db, "users", res.user.uid), {
+          uid: res.user.uid,
+          displayName,
+          email,
+          photoURL: downloadURL,
+        });
+        await setDoc(doc(db, "userChats", res.user.uid), {});
+        history.push("/");
+
+        console.log("User data saved successfully.");
       });
+    } catch (error: any) { // Specify the type of 'error'
+      console.error("Error registering user:", error);
+      setErrorMessage(error.message);
+    }
   };
 
-  render() {
-    return (
-      <IonPage>
-        <IonContent className="ion-padding-top" scrollY={false}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              height: "100vh",
-            }}
-          >
-            <div
-              style={{
-                border: "1px solid #bfbfbf",
-                padding: "16px",
-                borderRadius: "10px",
-                boxShadow: "3px 3px 10px 0px rgba(0,0,0,0.25)",
-              }}
-            >
-              <h1
-                style={{
-                  margin: "0",
-                  fontWeight: "bold",
-                  fontSize: "24px",
-                  marginBottom: "16px",
-                  color: "#2196f3",
-                }}
-              >
-                Register PAGE
-              </h1>
-              <IonInput
-                type="email"
-                id="email"
-                placeholder="E-mail"
-                onIonChange={(e) => this.handleChangeText(e)}
-                style={{
-                  padding: "12px",
-                  borderRadius: "8px",
-                  border: "1px solid #2196f3",
-                  outline: "none",
-                  display: "block",
-                  marginBottom: "12px",
-                  minWidth: "300px",
-                  color: "#2196f3",
-                }}
-              />
-              <IonInput
-                type="password"
-                id="password"
-                placeholder="Password"
-                onIonChange={(e) => this.handleChangeText(e)}
-                style={{
-                  padding: "12px",
-                  borderRadius: "8px",
-                  border: "1px solid #2196f3",
-                  outline: "none",
-                  display: "block",
-                  marginBottom: "12px",
-                  minWidth: "300px",
-                  color: "#2196f3",
-                }}
-              />
-              <IonButton
-                expand="full"
-                onClick={this.handleRegisterSubmit}
-                style={{
-                  padding: "8px",
-                  border: "1px solid #2196f3",
-                  borderRadius: "8px",
-                  minWidth: "200px",
-                  color: "white",
-                  background: "#2196f3",
-                  display: "block",
-                  margin: "0 auto",
-                  fontSize: "12px",
-                  textTransform: "uppercase",
-                  fontWeight: "bold",
-                  outline: "none",
-                }}
-              >
-                Register
-              </IonButton>
-            </div>
-            <IonButton
-              expand="full"
-              style={{
-                padding: "8px",
-                border: "1px solid #2196f3",
-                borderRadius: "8px",
-                minWidth: "200px",
-                color: "white",
-                background: "#2196f3",
-                display: "block",
-                margin: "0 auto",
-                fontSize: "12px",
-                textTransform: "uppercase",
-                fontWeight: "bold",
-                outline: "none",
-                marginTop: "32px",
-              }}
-            >
-              Go to Dashboard
-            </IonButton>
-          </div>
-        </IonContent>
-      </IonPage>
-    );
-  }
-}
+  return (
+    <IonPage>
+      <IonContent fullscreen className='formContainer'>
+        <div className='formWrapper'>
+          <span className="logo">Equinox Chat</span>
+          <span className="title">Register</span>
+          <form onSubmit={handleSubmit}>
+            <IonItem>
+              <IonInput type="text"  placeholder='display name'/>
+            </IonItem>
+            <IonItem>
+              <IonInput type="email" placeholder='email'/>
+            </IonItem>
+            <IonItem>
+              <IonInput type="password" placeholder='password'/>
+            </IonItem>
+            <IonItem>
+              <input type="file" id='file' />
+            </IonItem>
+            <IonButton type="submit" expand="block">Sign up</IonButton>
+            {errorMessage && <IonText color="danger">{errorMessage}</IonText>}
+          </form>
+          <p>You already have an account? <Link to="/login">Login</Link></p>
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
 
 export default Register;
