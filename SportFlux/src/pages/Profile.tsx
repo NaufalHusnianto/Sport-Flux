@@ -1,13 +1,19 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar, IonCardHeader, IonCardContent, IonList, IonItem } from '@ionic/react';
 import { settings } from 'ionicons/icons';
 import { useContext } from 'react';
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { AuthContext } from '../config/context/AuthContext';
 import { signOut } from 'firebase/auth';
 import { auth } from '../config/firebase/firebaseConfig';
 
 const UserProfile: React.FC = () => {
     const {currentUser} = useContext(AuthContext);
+    const history = useHistory();
+    
+    const Logout = () => {
+        signOut(auth);
+        history.push('/login');
+    };
 
     // Dummy data jika tidak ada yang login
     const dummyPhotoURL = '/Assets/img/profile.png';
@@ -16,6 +22,8 @@ const UserProfile: React.FC = () => {
     // gunakan untuk menampilan data pengguna
     const photoURL = currentUser ? currentUser.photoURL : dummyPhotoURL;
     const displayName = currentUser ? currentUser.displayName : dummyDisplayName;
+    const buttonProfileText = currentUser ? "Change Profile" : "Sign in";
+    const buttonProfileFunc = currentUser ? () => console.log('change') : () => history.push('/login');
 
   return (
     <IonPage>
@@ -49,7 +57,7 @@ const UserProfile: React.FC = () => {
               </IonRow>
               <IonRow className='mt-2 mb-2'>
                 <IonCol className='text-center'>
-                  <IonButton className='mt-0 w-50' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Change Profile</IonButton>
+                  <IonButton onClick={buttonProfileFunc} className='mt-0 w-50' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>{buttonProfileText}</IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
@@ -176,7 +184,7 @@ const UserProfile: React.FC = () => {
             </IonCardContent>
         </IonCard>
         <IonCard className='ion-no-border ps-4 pe-4 text-center' style={{ background: 'transparent', border: 'none', borderRadius: '999px'}}>
-            <IonButton onClick={() => signOut(auth)} className='mt-4 mb-4 w-100 fs-6' style={{ borderRadius: '999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'} >Logout</IonButton>
+            <IonButton onClick={() => Logout()} className='mt-4 mb-4 w-100 fs-6' style={{ borderRadius: '999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'} >Logout</IonButton>
         </IonCard>
       </IonContent>
     </IonPage>

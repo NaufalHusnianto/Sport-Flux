@@ -80,7 +80,7 @@ const App: React.FC = () => {
                 <Diagnose />
               </Route>
               <Route exact path="/">
-                <Redirect to="/login" />
+                <Redirect to="/home" />
               </Route>
             </IonRouterOutlet>
             <IonTabBar slot="bottom" className='custom-tab-bar'>
