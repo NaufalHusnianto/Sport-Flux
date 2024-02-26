@@ -1,19 +1,31 @@
 import { IonContent, IonCardTitle, IonIcon, IonHeader, IonPage, IonGrid, IonRow, IonCol, IonImg, IonCard, IonButton, IonToolbar, IonCardHeader, IonCardContent, IonList, IonItem, IonText, IonAccordion, IonAccordionGroup, IonLabel } from '@ionic/react';
 import { settings, chevronForwardOutline, settingsOutline, carOutline, chatbubbleEllipsesOutline, helpCircleOutline, giftOutline, ribbonOutline, heartOutline, timeOutline, cubeOutline, walletOutline, cartOutline, clipboardOutline } from 'ionicons/icons';
 import { logoutUser } from '../firebaseConfig';
-import { useHistory } from "react-router-dom";
+import { useContext } from 'react';
+import { Redirect, useHistory } from "react-router-dom";
+import { AuthContext } from '../config/context/AuthContext';
+import { signOut } from 'firebase/auth';
+import { auth } from '../config/firebase/firebaseConfig';
 
 const UserProfile: React.FC = () => {
-  const history = useHistory();
-    const handleLogout = async () => {
-    const success = await logoutUser();
-    if (success) {
-      history.push('/login')
-      console.log('Logout successful');
-    } else {
-      console.log('Logout failed');
-    }
-  }
+    const {currentUser} = useContext(AuthContext);
+    const history = useHistory();
+    
+    const Logout = () => {
+        signOut(auth);
+        history.push('/login');
+    };
+
+    // Dummy data jika tidak ada yang login
+    const dummyPhotoURL = '/Assets/img/profile.png';
+    const dummyDisplayName = 'Guest';
+  
+    // gunakan untuk menampilan data pengguna
+    const photoURL = currentUser ? currentUser.photoURL : dummyPhotoURL;
+    const displayName = currentUser ? currentUser.displayName : dummyDisplayName;
+    const buttonProfileText = currentUser ? "Change Profile" : "Sign in";
+    const buttonProfileFunc = currentUser ? () => console.log('change') : () => history.push('/login');
+
   return (
     <IonPage>
       <IonContent color={'tertiary'}>
@@ -34,10 +46,10 @@ const UserProfile: React.FC = () => {
                     </IonCol>
                 </IonRow>
                 <IonRow>
-                    <img src='./profile.png' style={{ backgroundColor:'white', borderRadius:'100%', width:'100px', margin:'auto'}}></img>
+                    <img src={photoURL} style={{ backgroundColor:'white', borderRadius:'100%', width:'100px', margin:'auto'}}></img>
                 </IonRow>
                 <IonRow>
-                    <h1 style={{ margin:'10px auto 0px', fontSize:'30px', color:'white' }}>Clara Alverina</h1>
+                    <h1 style={{ margin:'10px auto 0px', fontSize:'30px', color:'white' }}>{displayName}</h1>
                 </IonRow>
                 <IonRow>
                     <IonText className='m-auto' color='tertiary'>
@@ -95,26 +107,26 @@ const UserProfile: React.FC = () => {
                     </IonCol>
                 </IonRow>
             </IonGrid>
-            <IonAccordionGroup>
-                  <IonAccordion value="first">
-                    <IonItem slot="header" color="light">
-                        <IonIcon icon={heartOutline} className='pe-2'></IonIcon>
-                      <IonLabel><strong>Liked</strong></IonLabel>
+                  <IonAccordionGroup>
+                       <IonAccordion value="first">
+                       <IonItem slot="header" color="light">
+                       <IonIcon icon={heartOutline} className='pe-2'></IonIcon>
+                       <IonLabel><strong>Liked</strong></IonLabel>
                     </IonItem>
                     <div className="ion-padding" slot="content">
                       First Content
                     </div>
                   </IonAccordion>
-                  <IonAccordion value="first">
+                  <IonAccordion value="two">
                     <IonItem slot="header" color="light">
                         <IonIcon icon={timeOutline} className='pe-2'></IonIcon>
-                      <IonLabel><strong>Recently Viewed</strong></IonLabel>
+                        <IonLabel><strong>Recently Viewed</strong></IonLabel>
                     </IonItem>
                     <div className="ion-padding" slot="content">
                       First Content
                     </div>
                   </IonAccordion>
-                  <IonAccordion value="first">
+                  <IonAccordion value="three">
                     <IonItem slot="header" color="light">
                         <IonIcon icon={ribbonOutline} className='pe-2'></IonIcon>
                       <IonLabel><strong>Loyalty</strong></IonLabel>
@@ -123,7 +135,7 @@ const UserProfile: React.FC = () => {
                       First Content
                     </div>
                   </IonAccordion>
-                  <IonAccordion value="first">
+                  <IonAccordion value="fourth">
                     <IonItem slot="header" color="light">
                         <IonIcon icon={giftOutline} className='pe-2'></IonIcon>
                       <IonLabel><strong>Gift Voucher</strong></IonLabel>
@@ -132,7 +144,7 @@ const UserProfile: React.FC = () => {
                       First Content
                     </div>
                   </IonAccordion>
-                  <IonAccordion value="first">
+                  <IonAccordion value="five">
                     <IonItem slot="header" color="light">
                         <IonIcon icon={settingsOutline} className='pe-2'></IonIcon>
                       <IonLabel><strong>Account Setting</strong></IonLabel>
@@ -141,7 +153,7 @@ const UserProfile: React.FC = () => {
                       First Content
                     </div>
                   </IonAccordion>
-                  <IonAccordion value="first">
+                  <IonAccordion value="six">
                     <IonItem slot="header" color="light">
                         <IonIcon icon={helpCircleOutline} className='pe-2'></IonIcon>
                       <IonLabel><strong>Help Centre</strong></IonLabel>
@@ -150,7 +162,7 @@ const UserProfile: React.FC = () => {
                       First Content
                     </div>
                   </IonAccordion>
-                  <IonAccordion value="first">
+                  <IonAccordion value="seven">
                     <IonItem slot="header" color="light">
                         <IonIcon icon={chatbubbleEllipsesOutline} className='pe-2'></IonIcon>
                       <IonLabel><strong>Chat with Sportflux</strong></IonLabel>
@@ -160,7 +172,12 @@ const UserProfile: React.FC = () => {
                     </div>
                   </IonAccordion>
             </IonAccordionGroup>
-            <IonButton onClick={handleLogout} className='mt-4 mb-4 w-100' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>Logout</IonButton>
+                <IonRow className='mt-2 mb-2'>
+                    <IonCol className='text-center'>
+                        <IonButton onClick={buttonProfileFunc} className='mt-0 w-50' style={{borderRadius: '20px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'}>{buttonProfileText}</IonButton>
+                    </IonCol>
+                </IonRow>
+            <IonButton onClick={() => Logout()} className='mt-4 mb-4 w-100 fs-6' style={{ borderRadius: '999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}} color={'secondary'} >Logout</IonButton>
         </IonCard>
       </IonContent>
     </IonPage>

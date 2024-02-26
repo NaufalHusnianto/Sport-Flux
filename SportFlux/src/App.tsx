@@ -41,72 +41,81 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Trainer from './pages/Trainer';
 import Diagnose from './pages/Diagnose';
 import ConsultationChat from './pages/ConsultationChat';
-
+import Register from './pages/Register';
+import { useContext } from 'react';
+import { AuthContext } from './config/context/AuthContext';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/home">
-            <Home />
+const App: React.FC = () => {
+  const { currentUser } = useContext(AuthContext);
+
+  return (
+    <IonApp>
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route exact path="/home">
+                <Home />
+              </Route>
+              <Route exact path="/device-manager">
+                <DeviceManager />
+              </Route>
+              <Route exact path="/activity">
+                <ActivityTab />
+              </Route>
+              <Route exact path="/community">
+                <Community/>
+              </Route>
+              <Route exact path="/profile">
+                <UserProfile />
+              </Route>
+              <Route exact path="/physiotherapist">
+                <Physiotherapist />
+              </Route>
+              <Route exact path="/trainer">
+                <Trainer />
+              </Route>
+              <Route exact path="/diagnose">
+                <Diagnose />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+            </IonRouterOutlet>
+            <IonTabBar slot="bottom" className='custom-tab-bar'>
+              <IonTabButton tab="Home" href="/home">
+                <IonIcon aria-hidden="true" icon={home} color='light'/>
+              </IonTabButton>
+              <IonTabButton tab="DeviceManager" href="/device-manager">
+                <IonIcon aria-hidden="true" icon={desktop} color='light'/>
+              </IonTabButton>
+              <IonTabButton tab="activity" href="/activity">
+                <IonIcon aria-hidden="true" icon={analytics} color='light' style={{ width: '70%', height: '70%', padding: '10px', background: 'rgba(0,0,0,0.5)', borderRadius: '9999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}/>
+              </IonTabButton>
+              <IonTabButton tab="community" href="/community">
+                <IonIcon aria-hidden="true" icon={people} color='light'/>
+              </IonTabButton>
+              <IonTabButton tab="UserProfile" href="/profile">
+                <IonIcon aria-hidden="true" icon={person} color='light'/>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+          <Route exact path="/login">
+            <Login />
           </Route>
-          <Route exact path="/device-manager">
-            <DeviceManager />
+          <Route exact path="/register">
+            <Register />
           </Route>
-          <Route exact path="/activity">
-            <ActivityTab />
+          <Route exact path="/forgetpassword">
+            <ForgetPassword />
           </Route>
-          <Route exact path="/community">
-            <Community/>
+          <Route exact path="/consultationchat">
+            <ConsultationChat />
           </Route>
-          <Route exact path="/profile">
-            <UserProfile />
-          </Route>
-          <Route exact path="/physiotherapist">
-            <Physiotherapist />
-          </Route>
-          <Route exact path="/trainer">
-            <Trainer />
-          </Route>
-          <Route exact path="/diagnose">
-            <Diagnose />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/Home" />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom" className='custom-tab-bar'>
-          <IonTabButton tab="Home" href="/home">
-            <IonIcon aria-hidden="true" icon={home} color='light'/>
-          </IonTabButton>
-          <IonTabButton tab="DeviceManager" href="/device-manager">
-            <IonIcon aria-hidden="true" icon={desktop} color='light'/>
-          </IonTabButton>
-          <IonTabButton tab="activity" href="/activity">
-            <IonIcon aria-hidden="true" icon={analytics} color='light' style={{ width: '70%', height: '70%', padding: '10px', background: 'rgba(0,0,0,0.5)', borderRadius: '9999px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)' }}/>
-          </IonTabButton>
-          <IonTabButton tab="community" href="/community">
-            <IonIcon aria-hidden="true" icon={people} color='light'/>
-          </IonTabButton>
-          <IonTabButton tab="UserProfile" href="/profile">
-            <IonIcon aria-hidden="true" icon={person} color='light'/>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-      <Route exact path="/login">
-        <Login />
-      </Route>
-      <Route exact path="/forgetpassword">
-        <ForgetPassword />
-      </Route>
-      <Route exact path="/consultationchat">
-        <ConsultationChat />
-      </Route>
-    </IonReactRouter>
-  </IonApp>
-);
+        </IonReactRouter>
+    </IonApp>
+  )
+};
 
 export default App;

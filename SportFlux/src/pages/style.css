@@ -5,9 +5,18 @@
     z-index: 99;
 }
 
+.apply-button{
+    color: #3880ff;
+    font-size: larger;
+}
+
+.filter-header{
+    box-shadow: none;
+    margin-bottom: -20px;
+}
+
 .filter-modal{
     --width: 100%;
-    --height: 50%;
     align-items: end;
 }
 

@@ -7,19 +7,19 @@ const Diagnose: React.FC = () => {
     return (
         <IonPage>
             <IonContent color={"tertiary"}>
-            <IonImg src="/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.3, zIndex: -1}} />
+            <IonImg src="/Assets/img/IM2.png" style={{ position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: 'auto', opacity: 0.3, zIndex: -1}} />
                 <IonCard className='ion-no-border m-0' style={{ position: 'absolute', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px', background: 'rgba(0, 0, 0, 0.3)', boxShadow: '2px 2px 5px #0b0b0b', zIndex: 9999}}>
-                        <IonCard color={'primary'} className="mt-2" style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
+                        <IonCard color={'primary'} className="mt-2 pb-3" style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
                             <IonGrid>
                                 <IonRow>
                                     <IonCol className='d-flex justify-content-center align-item-center'>
-                                        <IonImg src='LOGO.png' style={{ width: '30%', height: 'auto' }} />
+                                        <IonImg src='/Assets/img/LOGO.png' style={{ width: '30%', height: 'auto' }} />
                                     </IonCol>
                                 </IonRow>
                                 <IonRow>
                                     <IonCol size='4' className="p-0 m-0">
                                         <IonCard color={"tertiary"} className="p-0 m-0 h-100 d-flex justify-content-center align-item-center" style={{ background: 'rgba(0,0,0,0)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)', borderRadius: '20px', backgroundColor: '#122D3B' }}>
-                                            <IonImg src='/T11.png'/>
+                                            <IonImg src='/Assets/img/T11.png'/>
                                         </IonCard>
                                     </IonCol>
                                     <IonCol size='8' className="p-0 m-0">
@@ -65,7 +65,7 @@ const Diagnose: React.FC = () => {
                         <IonGrid style={{background: 'rgba(0,0,0,0.2)', borderRadius: '30px',}} className="p-0">
                             <IonRow style={{ borderRadius: '30px', background: 'rgba(0,0,0,0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
                                 <IonCol size="5">
-                                    <IonImg src='IM2.png' style={{ width: '40%', height: 'auto' }} />
+                                    <IonImg src='/Assets/img/IM2.png' style={{ width: '40%', height: 'auto' }} />
                                 </IonCol>
                                 <IonCol size="7">
                                     <p className="fs-3 fw-bold m-0">Channel 1</p>
@@ -83,46 +83,10 @@ const Diagnose: React.FC = () => {
                         <IonGrid style={{background: 'rgba(0,0,0,0.2)', borderRadius: '30px',}} className="p-0">
                             <IonRow style={{ borderRadius: '30px', background: 'rgba(0,0,0,0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
                                 <IonCol size="5">
-                                    <IonImg src='IM2.png' style={{ width: '40%', height: 'auto' }} />
+                                    <IonImg src='/Assets/img/IM2.png' style={{ width: '40%', height: 'auto' }} />
                                 </IonCol>
                                 <IonCol size="7">
-                                    <p className="fs-3 fw-bold m-0">Channel 1</p>
-                                    <p className="m-0">Duration</p>
-                                    <p className="m-0">Data Stream</p>
-                                    <p className="m-0">Status</p>
-                                </IonCol>
-                            </IonRow>
-                            <IonRow style={{ borderRadius: '0 0 30px 30px'}} className="p-3">
-                                {/* <SignalChart /> */}
-                            </IonRow>
-                        </IonGrid>
-                    </IonCard>
-                    <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-                        <IonGrid style={{background: 'rgba(0,0,0,0.2)', borderRadius: '30px',}} className="p-0">
-                            <IonRow style={{ borderRadius: '30px', background: 'rgba(0,0,0,0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
-                                <IonCol size="5">
-                                    <IonImg src='IM2.png' style={{ width: '40%', height: 'auto' }} />
-                                </IonCol>
-                                <IonCol size="7">
-                                    <p className="fs-3 fw-bold m-0">Channel 1</p>
-                                    <p className="m-0">Duration</p>
-                                    <p className="m-0">Data Stream</p>
-                                    <p className="m-0">Status</p>
-                                </IonCol>
-                            </IonRow>
-                            <IonRow style={{ borderRadius: '0 0 30px 30px'}} className="p-3">
-                                {/* <SignalChart /> */}
-                            </IonRow>
-                        </IonGrid>
-                    </IonCard>
-                    <IonCard color={'primary'} style={{background: 'rgba(0,0,0,0)', boxShadow: 'none'}}>
-                        <IonGrid style={{background: 'rgba(0,0,0,0.2)', borderRadius: '30px',}} className="p-0">
-                            <IonRow style={{ borderRadius: '30px', background: 'rgba(0,0,0,0.3)', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.8)'}}>
-                                <IonCol size="5">
-                                    <IonImg src='IM2.png' style={{ width: '40%', height: 'auto' }} />
-                                </IonCol>
-                                <IonCol size="7">
-                                    <p className="fs-3 fw-bold m-0">Channel 1</p>
+                                    <p className="fs-3 fw-bold m-0">Channel 2</p>
                                     <p className="m-0">Duration</p>
                                     <p className="m-0">Data Stream</p>
                                     <p className="m-0">Status</p>
